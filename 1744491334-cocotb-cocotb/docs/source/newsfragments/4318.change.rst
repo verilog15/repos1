@@ -1,0 +1,1 @@
+For scalar logic objects, such as un-arrayed ``logic`` in Verilog and ``std_logic`` in VHDL, ``handle.value`` now returns a :class:`.Logic` rather than a :class:`.LogicArray`.

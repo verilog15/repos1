@@ -1,0 +1,1 @@
+The ``RTL_LIBRARY`` and :make:var:`TOPLEVEL_LIBRARY` Makefile variables were merged into :make:var:`TOPLEVEL_LIBRARY`. Update all uses of ``RTL_LIBRARY``.
