@@ -1,0 +1,27 @@
+# Requirements for the KeOps doc and tutorials:
+sphinx
+sphinx-gallery
+recommonmark
+myst-parser
+sphinxcontrib-httpdomain
+sphinx_rtd_theme
+cloud-sptheme
+sphinx-prompt
+breathe
+imageio
+gpytorch
+plotly
+si_prefix
+scikit-learn
+multiprocess
+pandas
+torch
+pybind11
+
+
+# Extra requirements for the GeomLoss doc:
+plyfile
+SimpleITK
+scikit-image
+# pyvtk  # dropped for pyvista
+pyvista

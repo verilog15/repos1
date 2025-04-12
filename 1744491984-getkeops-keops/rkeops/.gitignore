@@ -1,0 +1,8 @@
+# local gitignore
+*.o
+*.so
+inst/doc
+Meta
+/doc/
+/Meta/
+/docs/
