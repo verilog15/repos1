@@ -1,0 +1,129 @@
+name: New Device
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  create-device-pull-request:
+    if: ${{ contains(github.event.issue.labels.*.name, 'new-device') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Parse device data
+        id: device-data
+        uses: issue-ops/parser@v4
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: new_device_request.yml
+
+      - name: Install jq
+        run: sudo apt install jq
+
+      - name: Set up python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update JSON file
+        id: update-json
+        uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import re
+            import json
+
+            # Load the existing JSON library file
+            with open("custom_components/battery_notes/data/library.json",'r') as f:
+              devices_json = json.loads(f.read())
+              devices = devices_json.get('devices')
+
+            # Remove the "battery_quantity" key from the device dictionary if it's 1
+            new_device = ${{ steps.device-data.outputs.json }}
+            # Convert battery_quantity field to a numeric
+            numeric_quantity = int(new_device["battery_quantity"])
+            del new_device["battery_quantity"]
+            # Add  numeric "battery_quantity" key if it's more than 1
+            if numeric_quantity > 1:
+              new_device["battery_quantity"] = numeric_quantity
+            if new_device.get("model_id", "MISSING").strip() == "":
+              del new_device["model_id"]
+            if new_device.get("hw_version", "MISSING").strip() == "":
+              del new_device["hw_version"]
+
+            # Check for duplicates and replace old entry with new one
+            duplicate_found = False
+            for i, device in enumerate(devices):
+              if device["manufacturer"] == new_device["manufacturer"] and device["model"] == new_device["model"] and device.get("model_id", "") == new_device.get("model_id", "") and device.get("hw_version", "") == new_device.get("hw_version", ""):
+                devices[i] = new_device
+                duplicate_found = True
+                break
+
+            # If no duplicate found, add the new device to the JSON library file
+            if not duplicate_found:
+              devices.append(new_device)
+
+            # Save manufacturer and model for later use
+            set_output("branch", "_".join(re.findall(r"\w+",f"{new_device['manufacturer']} {new_device['model']} {new_device.get('model_id', '')} {new_device.get('hw_version', '')})".lower())))
+            set_output("manufacturer", new_device['manufacturer'])
+            set_output("model", new_device['model'])
+            set_output("model_id", new_device.get('model_id', ''))
+            set_output("hw_version", new_device.get('hw_version', ''))
+            set_output("bqt", f"{numeric_quantity}x {new_device['battery_type']}")
+
+            if duplicate_found:
+              set_output("mode", "updates")
+            else:
+              set_output("mode", "adds")
+
+            with open("custom_components/battery_notes/data/library.json", "w") as f:
+              f.write(json.dumps(devices_json, indent=4))
+
+      - name: Rename Issue
+        run: |
+          curl --request PATCH \
+            --url https://api.github.com/repos/${{github.repository}}/issues/${{github.event.issue.number}} \
+            --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "title": "Device: ${{ steps.update-json.outputs.manufacturer }} - ${{ steps.update-json.outputs.model }}"
+            }'
+
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: custom_components/battery_notes/schema.json
+          INPUT_JSONS: custom_components/battery_notes/data/library.json
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "Update device: ${{ steps.update-json.outputs.model }} by ${{ steps.update-json.outputs.manufacturer }}"
+          title: "Device: ${{ steps.update-json.outputs.manufacturer }} - ${{ steps.update-json.outputs.model }}"
+          body: |
+            This pull request ${{ steps.update-json.outputs.mode }} the device information for:
+            Manufacturer: ${{ steps.update-json.outputs.manufacturer }}
+            Model: ${{ steps.update-json.outputs.model }}
+            Model ID: ${{ steps.update-json.outputs.model_id }}
+            Hardware: ${{ steps.update-json.outputs.hw_version }}
+            Battery: ${{ steps.update-json.outputs.bqt }}
+            It closes issue #${{ github.event.issue.number }}
+
+            If Battery Notes is useful to you please
+            [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/codechimp)
+          branch: "device-${{ steps.update-json.outputs.branch }}"
+
+      - name: Close Issue
+        run: gh issue close --comment "$BODY" ${{github.event.issue.number}}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: >
+            Thanks for the contribution. We're auto-closing this issue. If it's a new device, a pull request will be created that will be reviewed and merged.  
+
+
+            If Battery Notes is useful to you please  
+
+            
+            [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/codechimp)

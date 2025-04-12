@@ -1,0 +1,21 @@
+# artifacts
+__pycache__
+.pytest*
+*.egg-info
+*/build/*
+*/dist/*
+
+
+# misc
+.coverage
+coverage.xml
+
+
+# Home Assistant configuration
+config/*
+!config/configuration.yaml
+.DS_Store
+custom_components/battery_notes/data/library-dev.json
+config/configuration.yaml
+
+custom_components/battery_notes/frontend/node_modules
