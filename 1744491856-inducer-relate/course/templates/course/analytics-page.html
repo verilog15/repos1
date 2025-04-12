@@ -1,0 +1,68 @@
+{% extends "course/course-base-with-markup.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "Analytics" %} - {{ relate_site_name }}
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Analytics" %}: <tt>{{ flow_identifier}} - {{ group_id }}/{{ page_id }}</tt></h1>
+
+  <div class="relate-well">
+    {{ body|safe }}
+  </div>
+
+  <h2>{% trans "Answer Distribution" %}</h2>
+
+  <p>
+    {% if restrict_to_first_attempt %}
+      {% comment %}
+        Translators: the following are the options when showing attempts of particiants in
+        grade analytics.
+      {% endcomment %}
+      {% blocktrans trimmed %}
+      Showing results for <i>only the first attempt</i> by each participant.
+      {% endblocktrans %}
+      <a href="?restrict_to_first_attempt=0">
+        {% trans "Show all attempts" %}
+      </a>
+    {% else %}
+      {% trans "Showing results for <i>all attempts</i> by each participant." %}
+      <a href="?restrict_to_first_attempt=1">
+        {% trans "Show only the first attempt" %}
+      </a>
+    {% endif %}
+  </p>
+
+
+  <div class="answer-analytics">
+  {% for astats in answer_stats_list %}
+    <div class="answer-entry">
+      {{ astats.normalized_answer }}
+      {% blocktrans trimmed with astats_count=astats.count count counter=astats.count %}
+        ({{ astats_count }} response)
+      {% plural %}
+        ({{ astats_count }} responses)
+      {% endblocktrans %}
+
+      <div class="progress">
+        <div class="progress-bar
+          {% if astats.correctness == 0 %}
+            bg-danger
+          {% elif astats.correctness == 1 %}
+            bg-success
+          {% elif astats.correctness == None %}
+            bg-info
+          {% else %}
+            bg-warning
+          {% endif %}"
+          role="progressbar"
+          aria-valuenow="{{ astats.percentage }}" aria-valuemin="0" aria-valuemax="100"
+          style="width: {{ astats.percentage|stringformat:".9f" }}%">
+          <span class="stats-percentage">{{ astats.percentage|floatformat:1 }}%</span>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <div>
+{% endblock %}

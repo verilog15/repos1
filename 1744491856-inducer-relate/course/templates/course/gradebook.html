@@ -1,0 +1,83 @@
+{% extends "course/course-datatables.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "Grade book" %} - {{ relate_site_name }}
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Grade book" %}</h1>
+
+  <table class="table table-striped gradebook ">
+    <thead>
+    {% if not pperm.view_participant_masked_profile %}
+        <th class="datacol">{% trans "User ID" %}</th>
+        <th class="datacol">{% trans "Name" context "real name of a user" %}</th>
+    {% else %}
+        <th class="datacol">{% trans "User" %}</th>
+    {% endif %}
+      {% for opp in grading_opportunities reversed %}
+      <th class="datacol"><a href="{% url "relate-view_grades_by_opportunity" course.identifier opp.pk %}">{{ opp.name }}</a> <tt style="font-size:x-small">({{ opp.identifier }})</tt></th>
+      {% endfor %}
+    </thead>
+    <tbody>
+      {% for participation, grades in grade_table %}
+      <tr>
+        <td class="headcol"><a href="{% url "relate-view_participant_grades" course.identifier participation.id %}">
+            <span class="sensitive">
+                {% if not pperm.view_participant_masked_profile %}
+                    {{ participation.user.username }}
+                {% else %}
+                  {%  if participation.user == user %}{% trans "Me" %}{% else %}{{ participation.user.get_masked_profile }}{% endif %}
+                {% endif %}
+            </span></a>
+            {% if pperm.view_participant_masked_profile %}
+                {% if participation|has_permission:"view_gradebook" %}
+                    ({{ participation.get_role_desc }})
+                {% endif %}
+            {% endif %}
+        </td>
+        {% if not pperm.view_participant_masked_profile %}
+        <td class="datacol">
+          <span class="sensitive">
+            {{ participation.user.get_full_name }}
+          </span>
+            {% if participation|has_permission:"view_gradebook" %}
+              ({{ participation.get_role_desc }})
+            {% endif %}
+        </td>
+        {% endif %}
+        {% for grade_info in grades reversed %}
+          <td class="datacol"
+            {% if grade_info.grade_state_machine.percentage != None %}
+            data-order="{{ grade_info.grade_state_machine.percentage }}"
+            {% else %}
+            data-order="-1"
+            {% endif %}
+                      >
+            <a href="{% url "relate-view_single_grade" course.identifier participation.id grade_info.opportunity.id %}"
+               ><span class="sensitive">{{ grade_info.grade_state_machine.stringify_state }}</span></a>
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block page_bottom_javascript_extra %}
+  {% load static %}
+  {% get_current_js_lang_name as LANG %}
+  <script type="text/javascript">
+    var tbl = $("table.gradebook").dataTable({
+        "scrollX": true,
+        "scrollCollapse": true,
+        "paging": true,
+        "ordering": true,
+        "columnDefs": [{ type: 'name', targets: 1 }],
+        "language": rlDataTables.getI18nTable('{{ LANG}}'),
+    } );
+    new $.fn.dataTable.FixedColumns(tbl);
+  </script>
+  {{ block.super }}
+{% endblock %}

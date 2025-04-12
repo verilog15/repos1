@@ -1,0 +1,8 @@
+{% extends "course/course-base.html" %}
+{% load static %}
+
+{% block bundle_loads %}
+  {# contains mathjax config #}
+  <script src="{% static 'bundle-base-with-markup.js' %}"></script>
+  <script src="{% static "tex-svg.js" %}" id="MathJax-script" async></script>
+{% endblock %}

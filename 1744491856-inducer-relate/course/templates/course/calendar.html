@@ -1,0 +1,50 @@
+{% extends "course/course-base-with-markup.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+  {{ course.number}}
+  {% trans "Calendar" %} - {{ relate_site_name }}
+{% endblock %}
+
+{% block bundle_loads %}
+  {{ block.super }}
+  <script src="{% static 'bundle-fullcalendar.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <h1>{{ course.number}} {% trans "Calendar" %}</h1>
+
+  <div id="coursecal" style="margin-top:3em"></div>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+            rlFullCalendar.setupCalendar(
+                  document.getElementById("coursecal"),
+                  {{ events_json|safe }},
+                  '{{ default_date }}',
+                  '{{ fullcalendar_lang_code }}');
+          });
+  </script>
+
+{% blocktrans trimmed %}
+  <b>Note:</b> Some calendar entries are clickable and link to entries
+  below.
+{% endblocktrans %}
+
+  <div style="margin-top:3ex">
+  {% for event_info in event_info_list %}
+    <div id="event-{{ event_info.id }}" class="panel panel-default relate-calendar-event">
+      <div class="panel-heading">
+        <b>{{ event_info.human_title }}</b>
+        ({{ event_info.start_time }}{% if event_info.end_time %} - {{ event_info.end_time }}{% endif %})
+      </div>
+      <div class="panel-body">
+        {{ event_info.description|safe }}
+      </div>
+    </div>
+  {% endfor%}
+  </div>
+
+{% endblock %}
+

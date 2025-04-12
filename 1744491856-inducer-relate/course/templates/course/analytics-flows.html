@@ -1,0 +1,25 @@
+{% extends "course/course-base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "Analytics" %} - {{ relate_site_name }}
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Analytics: List of Flows with Sessions" %}</h1>
+  {% if flow_ids %}
+    <ul>
+      {% for flow_id in flow_ids %}
+      <li>
+      <a href="{% url "relate-flow_analytics" course.identifier flow_id %}">
+        {{ flow_id }}
+      </a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% trans " No flow sessions have been recorded." %}
+  {% endif %}
+{% endblock %}
+
+

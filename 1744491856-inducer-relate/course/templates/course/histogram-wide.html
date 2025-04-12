@@ -1,0 +1,27 @@
+<div class="histogram">
+  <table>
+    {% for bin in bin_info_list %}
+      <tr class="histogram-entry">
+        <td class="histogram-title">
+          {% if bin.url %}
+            <a href="{{ bin.url }}">{{ bin.title }}</a>
+          {% else %}
+            {{ bin.title }}
+          {% endif %}
+          ({{ bin.raw_weight }})
+        </td>
+        <td class="histogram-bar-cell">
+          {% if bin.percentage != None %}
+            <div class="progress">
+              <div class="progress-bar bg-info" role="progressbar"
+                aria-valuenow="{{ bin.percentage }}" aria-valuemin="0" aria-valuemax="100"
+                style="width: {{ bin.percentage|stringformat:".4f" }}%">
+                <span class="stats-percentage">{{ bin.percentage|floatformat:1 }}%</span>
+              </div>
+            </div>
+          {% endif %}
+        </td>
+      </div>
+    {% endfor %}
+  </table>
+</div>

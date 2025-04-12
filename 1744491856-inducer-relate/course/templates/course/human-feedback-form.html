@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+<div class="relate-well">
+  {% crispy form %}
+</div>
+
+<div class="card">
+  <div class="card-header">{% trans "Rubric" %}</div>
+  <div class="card-body">
+    {{ rubric|safe }}
+  </div>
+</div>
+

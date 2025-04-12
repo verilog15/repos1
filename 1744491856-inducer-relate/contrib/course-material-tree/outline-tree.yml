@@ -1,0 +1,32 @@
+# This is processed by make-outline-tree.sh to make outline-tree.html.
+
+text: "CS 123"
+nodes:
+
+-   text: "Introduction"
+    icon: "bi bi-box"
+    opened: true
+    section: 0
+    nodes:
+    -   text: "Notes"
+        icon: "bi bi-book"  # see http://fontawesome.io/icons/
+        link: "http://andreask.cs.illinois.edu/cs598apk-f15/notes/notes.pdf"
+
+-   text: "Dense Matrices and Computation"
+    section: 1
+    icon: "bi bi-box"
+    opened: true
+    nodes:
+    -   text: "Notes"
+        icon: "bi bi-book"
+        link: "http://andreask.cs.illinois.edu/cs598apk-f15/notes/notes.pdf#page=10"
+
+    -   text: "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions by Halko/Martinsson/Tropp"
+        icon: "bi bi-paperclip"
+        link: http://arxiv.org/abs/0909.4061
+
+    -   text: "Sources and Targets"
+    -   text: "Point Interactions and Matrix Entries"
+    -   text: "Rank and Complexity"
+    -   text: "Numerical Rank"
+    -   text: "Representation as Right Preconditioning"

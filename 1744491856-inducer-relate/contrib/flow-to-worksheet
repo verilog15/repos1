@@ -1,0 +1,216 @@
+#! /usr/bin/env python3
+
+import sys
+import pypandoc
+import re
+from jinja2 import Template, Environment, StrictUndefined
+from course.content import (
+        process_yaml_for_expansion, YamlBlockEscapingFileSystemLoader)
+
+
+QUESTIONS_ONLY_TEMPLATE = Template(r"""
+{% for q in questions %}
+    {{ q }}
+{% endfor %}
+""")
+
+
+TEMPLATE = Template(r"""
+\documentclass[11pt]{article}
+
+\usepackage{akteach}
+\usepackage{examtron}
+\pagestyle{empty}
+
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{tikz}
+\titleformat{\section}
+  {\normalfont\sffamily\large\bfseries}
+  {Part \thesection. }{0em}{}
+\def\tightlist{}
+
+\begin{document}
+
+\akteachheader{ {{- header -}} }{ {{- title -}} }
+
+{% for q in questions %}
+    {{ q }}
+{% endfor %}
+\end{document}
+""")
+
+
+INCLUDE_GRAPHICS_MEDIA_RE = re.compile(r"\\includegraphics\{media:(.*)\}")
+INCLUDE_GRAPHICS_REPO_RE = re.compile(r"\\includegraphics\{repo:(.*)\}")
+FORMULA_ALIGN_RE = re.compile(
+        r"\\\["
+        r"\s*(\\begin\{align\*?\})"
+        r"(.*?)"
+        r"(\\end\{align\*?\})\s*"
+        r"\\\]", re.DOTALL)
+
+
+def convert_markup(s):
+    result = pypandoc.convert(s, 'latex', format='markdown')
+    result, _ = INCLUDE_GRAPHICS_MEDIA_RE.subn(
+            r"\\includegraphics[height=4cm]{media/\1}", result)
+    result, _ = INCLUDE_GRAPHICS_REPO_RE.subn(
+            r"\\includegraphics[height=4cm]{\1}", result)
+    result, _ = FORMULA_ALIGN_RE.subn(
+            r"\1\2\3", result)
+    return result
+
+
+def convert_page_inner(page):
+    if page.type == "Page":
+        return convert_markup(page.content)
+    elif page.type in ["TextQuestion", "SurveyTextQuestion"]:
+        prompt = convert_markup(page.prompt) + "\n\\vspace*{2cm}"
+        return (prompt)
+    elif page.type == "InlineMultiQuestion":
+        question, _ = re.subn(
+                r"\{\[\}\{\[\}\w+\{\]\}\{\]\}",
+                r"\\tikz [baseline=0]\\draw (0,-1ex) rectangle +(10em,3.5ex);",
+                convert_markup(page.question))
+
+        prompt = (
+                convert_markup(page.prompt)
+                + "\n\n"
+                + question
+                + "\n\\vspace*{1cm}")
+        return (prompt)
+    elif page.type in [
+            "PythonCodeQuestion",
+            "PythonCodeQuestionWithHumanTextFeedback"]:
+        prompt = convert_markup(page.prompt)
+
+        if hasattr(page, "initial_code"):
+            prompt += r"\begin{verbatim}%s\end{verbatim}" % page.initial_code
+
+        prompt += "\n\\vspace*{3cm}"
+        return (prompt)
+    elif page.type == "FileUploadQuestion":
+        prompt = convert_markup(page.prompt) + "\n\\vspace*{5cm}"
+        return (prompt)
+    elif page.type in ["ChoiceQuestion", "MultipleChoiceQuestion",
+            "SurveyChoiceQuestion"]:
+        prompt = convert_markup(page.prompt)
+
+        if page.type == "MultipleChoiceQuestion":
+            prompt += "\n\n(Select all that apply.)"
+
+        choices = [
+            "\item "
+            +
+            convert_markup(str(ch).replace("~CORRECT~", r"\correct "))
+            for ch in page.choices
+            if ch is not None]
+
+        return (
+            "{}\n"
+            r"\begin{{examtronchoices}}"
+            "\n"
+            "{}\n"
+            r"\end{{examtronchoices}}"
+            "\n"
+            .format(
+                prompt,
+                "\n".join(choices))
+            )
+    else:
+        print("*** WARNING: Unknown page type '%s'" % page.type,
+                file=sys.stderr)
+
+
+def convert_page(page, wrap_in_problem_env):
+    title = getattr(page, "title", None)
+    if hasattr(page, "prompt") and title is None:
+        from course.content import extract_title_from_markup
+        title = extract_title_from_markup(page.prompt)
+
+    if title is None:
+        title = ""
+
+    result = convert_page_inner(page)
+
+    if wrap_in_problem_env:
+        return (
+            "\\begin{{examtronproblem}}{{{title}}}\n"
+            "{body}\n"
+            "\\end{{examtronproblem}}\n".format(
+                title=title,
+                body=result))
+    else:
+        return result
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-1", "--one", action="store_true")
+    parser.add_argument("-q", "--questions-only", action="store_true")
+    parser.add_argument("-p", "--examtron-problem", action="store_true")
+    parser.add_argument("--header", default="")
+    parser.add_argument("--title", default="Worksheet")
+    parser.add_argument("-r", "--repo-root", default=".")
+    parser.add_argument("input", default="-", nargs="?")
+    parser.add_argument("output", default="-", nargs="?")
+
+    args = parser.parse_args()
+
+    if args.input == "-":
+        data = sys.stdin.read()
+    else:
+        with open(args.input, "r") as inf:
+            data = inf.read()
+
+    data = process_yaml_for_expansion(data)
+
+    jinja_env = Environment(
+            loader=YamlBlockEscapingFileSystemLoader(args.repo_root),
+            undefined=StrictUndefined)
+    template = jinja_env.from_string(data)
+    data = template.render()
+
+    from yaml import load
+    from relate.utils import dict_to_struct
+    data = dict_to_struct(load(data))
+
+    questions = []
+
+    if not args.one:
+        flow_desc = data
+        if hasattr(flow_desc, "groups"):
+            pages = [
+                    page
+                    for grp in flow_desc.groups
+                    for page in grp.pages]
+        else:
+            pages = flow_desc.pages
+
+        for page in pages:
+            print(page.id)
+            converted = convert_page(page, args.examtron_problem)
+            questions.append(converted)
+
+        template = TEMPLATE
+        if args.questions_only:
+            template = QUESTIONS_ONLY_TEMPLATE
+
+        data = template.render(
+                questions=questions,
+                title=args.title,
+                header=args.header)
+    else:
+        data = convert_page(data, args.examtron_problem)
+
+    if args.output == "-":
+        sys.stdout.write(data)
+    else:
+        with open(args.output, "w") as outf:
+            outf.write(data)
+
+
+if __name__ == "__main__":
+    main()

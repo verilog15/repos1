@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% if data_url %}
+  <div id="file_upload_viewer_div">
+  </div>
+  <div class="col-lg-offset-2" style="margin-bottom:2ex">
+    <a href="{{ data_url }}" id="file_upload_download_link" target="_blank">{% trans "Download/review uploaded file in new window" %}</a>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(rlUtils.enablePreviewForFileUpload);
+  </script>
+{% endif %}
+
+{% crispy form %}

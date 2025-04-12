@@ -1,0 +1,20 @@
+{% extends "course/course-base-with-markup.html" %}
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+  <h1>{% trans "Markup Sandbox" %}</h1>
+  {% if preview_text %}
+  <div class="relate-well">
+    <div style="max-height:700px; overflow-y:scroll">
+      {{ preview_text|safe }}
+    </div>
+  </div>
+  {% endif %}
+  <div class="relate-well">
+    {% crispy form %}
+  </div>
+{% endblock %}
+

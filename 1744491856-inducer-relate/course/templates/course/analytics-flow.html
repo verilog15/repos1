@@ -1,0 +1,96 @@
+{% extends "course/course-base-with-markup.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% trans "Analytics" %} - {{ relate_site_name }}
+{% endblock %}
+
+{% block content %}
+  <h1> {% blocktrans %} Analytics: <tt>{{ flow_identifier}}</tt> {% endblocktrans %} </h1>
+
+  <h2>{% trans "Grade Distribution" %}</h2>
+
+  <p>
+    {% if restrict_to_first_attempt %}
+      {% comment %}
+        Translators: the following are the options when showing attempts of particiants in
+        grade analytics.
+      {% endcomment %}
+      {% blocktrans trimmed %}
+      Showing results for <i>only the first attempt</i> by each participant.
+      {% endblocktrans %}
+      <a href="?restrict_to_first_attempt=0">
+        {% trans "Show all attempts" %}
+      </a>
+    {% else %}
+      {% trans "Showing results for <i>all attempts</i> by each participant." %}
+      <a href="?restrict_to_first_attempt=1">
+        {% trans "Show only the first attempt" %}
+      </a>
+    {% endif %}
+  </p>
+  <p>
+    {% blocktrans trimmed with weight=grade_histogram.total_weight count counter=grade_histogram.total_weight %}
+      {{ weight }} grade
+    {% plural %}
+      {{ weight }} grades
+    {% endblocktrans %}
+    {% if participant_count != None %}
+      {% blocktrans trimmed count counter=participant_count %}
+        (from {{ participant_count }} distinct participant)
+      {% plural %}
+        (from {{ participant_count }} distinct participants)
+      {% endblocktrans %}
+    {% endif %}
+  </p>
+
+  {{ grade_histogram.html|safe }}
+
+  <h2>{% trans "Page-by-Page Statistics" %}</h2>
+
+  <div class="page-by-page-analytics">
+  {% for astats in page_answer_stats_list %}
+    <div class="page-entry">
+      {% if astats.url %}
+      <a href="{{ astats.url }}?restrict_to_first_attempt={{restrict_to_first_attempt}}">
+        <tt>{{ astats.group_id }}/{{ astats.page_id }}</tt></a>:
+      {% else %}
+        <tt>{{ astats.group_id }}/{{ astats.page_id }}</tt>:
+      {% endif %}
+      {{ astats.title|safe }}
+        {% blocktrans trimmed with answer_count=astats.answer_count count counter=astats.answer_count %}
+            ({{ answer_count }} non-empty response,
+        {% plural %}
+            ({{ answer_count }} non-empty responses,
+        {% endblocktrans %}
+        {% blocktrans trimmed with total_count=astats.total_count count counter=astats.total_count %}
+            {{ total_count }} response total)
+        {% plural %}
+            {{ total_count }} responses total)
+        {% endblocktrans %}
+
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar"
+          aria-valuenow="{{ astats.average_correctness_percent |floatformat:1 }}" aria-valuemin="0" aria-valuemax="100"
+          style="width: {{ astats.average_correctness_percent|stringformat:".9f" }}%">
+          <span class="stats-percentage">{{ astats.average_correctness_percent|floatformat:1 }}%</span>
+        </div>
+        <div class="progress-bar bg-danger" role="progressbar"
+          aria-valuenow="{{ astats.average_wrongness_percent|floatformat:1  }}" aria-valuemin="0" aria-valuemax="100"
+          style="width: {{ astats.average_wrongness_percent|stringformat:".9f" }}%">
+          <span class="stats-percentage">{{ astats.average_wrongness_percent|floatformat:1 }}%</span>
+        </div>
+        <div class="progress-bar bg-warning" role="progressbar"
+          aria-valuenow="{{ astats.average_emptiness_percent|floatformat:1  }}" aria-valuemin="0" aria-valuemax="100"
+          style="width: {{ astats.average_emptiness_percent|stringformat:".9f" }}%">
+          <span class="stats-percentage">{{ astats.average_emptiness_percent|floatformat:1 }}%</span>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <div>
+
+  <h2>{% trans "Time Distribution" %}</h2>
+
+  {{ time_histogram.html|safe }}
+{% endblock %}

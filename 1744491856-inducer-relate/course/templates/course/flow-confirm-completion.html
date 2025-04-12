@@ -1,0 +1,123 @@
+{% extends "course/course-base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {{flow_desc.title}} - {{ relate_site_name }}
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "End Session" %} '{{flow_desc.title}}'?</h1>
+
+  {% if unanswered_count %}
+    <div class="alert alert-danger">
+      <i class="bi bi-exclamation-triangle"></i>
+      {% trans "You have left the following question(s) unanswered:" %}
+          <ul>
+            {% for page_data in unanswered_page_data_list %}
+              <li>
+                <a href="{% url "relate-view_flow_page" course.identifier flow_session.id page_data.page_ordinal %}">
+                  {{ page_data.human_readable_ordinal }}: {{ page_data.title|safe }}
+                  {% if page_data.bookmarked %}
+                    <i class="bi bi-star-filled" aria-hidden="true"></i>
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+    </div>
+  {% endif %}
+
+  {% if required_count %}
+    <p>
+    {% blocktrans trimmed %}
+    There were {{required_count}} grading questions.
+    {% endblocktrans %}
+    {% if answered_count == required_count %}
+      {% blocktrans trimmed %}
+      You have provided an answer for all of them.
+      {% endblocktrans %}
+    {% else %}
+      {% blocktrans trimmed %}
+      You have answered {{answered_count}} and left {{unanswered_count}} unanswered.
+      {% endblocktrans %}
+    {% endif %}
+    </p>
+  {% endif %}
+
+  {% trans "If you choose to end your session, the following things will happen:" %}
+  <ul>
+    <li>{% trans "You will be prevented from making further changes to your answers." %}</li>
+    {% if session_may_generate_grade %}
+        <li>{% trans "All your currently saved answers, if not graded already, will be graded." %}</li>
+        <li>{% trans "If possible, a final grade will be computed from all saved, graded answers." %}</li>
+    {% endif %}
+  </ul>
+
+  <div class="relate-well flow-well">
+    <form method="POST" id="submit-form">
+      {% csrf_token %}
+
+      <a class="btn btn-secondary"
+        href="{% url "relate-view_flow_page" course.identifier flow_session.id last_page_nr %}"
+        role="button">&laquo; {% trans "Go back" %}</a>
+
+      {% if unanswered_count %}
+        <a id="pre-submit-button" class="btn btn-primary btn-danger">
+          {% trans "Confirm: Submit answers and end session" %}
+        </a>
+        <button id="submit" type="submit" name="submit" class="btn btn-danger"
+                style="display:none"
+                data-bs-content='<p>{% trans "Are you sure you would like to submit this session with questions unanswered?" %}</p>
+                        <a href="#" id="cancel-button" class="btn btn-primary btn-sm">
+                        {% trans "Cancel" %}</button>'
+                data-bs-html="true"
+                data-bs-container="body"
+                data-bs-placement="right"
+          >
+            {% trans "I am sure" %} &raquo;
+        </button>
+
+      {% else %}
+        <button type="submit" id="submit" name="submit" class="btn btn-primary">{% trans "Confirm: Submit answers and end session" %}</button>
+      {% endif %}
+
+    </form>
+  </div>
+
+  {% if unanswered_count %}
+      <script type="text/javascript">
+          $("#pre-submit-button").on('click', function(){
+              $("#pre-submit-button").fadeOut("normal", function(){
+                  $("#submit").fadeIn("normal", function(){
+                      $("#submit").popover("show");
+                      $("#cancel-button").on("click", function(){
+                          $("#submit").hide().popover("hide");
+                          $("#pre-submit-button").fadeIn("normal");
+                      });
+                  });
+              });
+          });
+      </script>
+  {% endif %}
+
+  <script type="text/javascript">
+    $("#submit-form").submit(
+        function()
+        {
+          // We can't simply set "disabled" on the submitting button here.
+          // Otherwise the browser will simply remove that button from the POST
+          // data.
+
+          $("button#submit").each(
+              function()
+              {
+                var clone = $(this).clone();
+                $(clone).attr("disabled", "1");
+                $(this).after(clone);
+                $(this).hide();
+              });
+        });
+  </script>
+
+{% endblock %}

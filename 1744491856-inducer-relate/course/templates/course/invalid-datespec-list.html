@@ -1,0 +1,42 @@
+{% extends "course/course-base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>{% trans "Event validity check" %}</h1>
+
+  {% if invalid_datespecs %}
+    {% blocktrans trimmed %}
+    The following events were found in course content that are not present
+    in the database:
+    {% endblocktrans %}
+    <ul>
+      {% for datespec, locations in invalid_datespecs %}
+        <li><tt>{{ datespec }}</tt>:
+          <ul>
+            {% for location in locations %}
+            <li> {{ location }} </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="alert alert-warning">
+      <p>
+      <i class="bi bi-exclamation-triangle"></i>
+      <b>{% trans "Unrecognized events were found." %}</b>
+      </p>
+
+      <p>
+      {% blocktrans trimmed %}
+      Check the "Calendar" functions in the instructor menu to add the
+      missing labels.
+      {% endblocktrans %}
+      </p>
+    </div>
+  {% else %}
+    <div class="alert alert-success">
+      <i class="bi bi-check"></i>
+      {% trans "No unrecognized events were found." %}
+    </div>
+  {% endif %}
+{% endblock %}

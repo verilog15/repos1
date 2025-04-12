@@ -1,0 +1,50 @@
+- Narrow form rendering
+- Custom matcher classes
+- Enter single grades
+- Show human/robot grader point parts
+
+Ideas
+=====
+
+- Fix race condition in attempt_count checking
+
+- Make system to link to flow-internal pages
+
+- Note about alternate left/right submission on page sandbox
+
+- Exceptions specific to one session
+
+- Page URL endpoints (see page-url-endpoints branch)
+
+- Fixed grading panel?
+
+- Manual grade entry/override
+
+- Flow results analytics
+  --> time taken per question
+
+- record end flow with a null page visit
+
+- Name X out of Y question
+- Multi text question
+- Multi MC question
+- Rank/order question
+- TextQuestions with answers yielding different grades
+
+Rejected ideas
+==============
+
+- Minimum visit times
+- Live chat via candy?
+- configuration store
+- Email me my code
+- time limits, extra time?
+- Restrict analytics to students
+  (bad idea: should at least include unenrolled to allow quick in-class work)
+- comment box http://jsfiddle.net/9Le8X/2/
+- Student tags, adapt homepage
+- question bank
+  -> localize an elaborate question and all its 'stuff' (JS, media)
+  -> use a media search path
+- web hooks for auto-fetch and auto-preview
+- question/page tags

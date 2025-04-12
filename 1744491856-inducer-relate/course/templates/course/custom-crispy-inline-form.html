@@ -1,0 +1,35 @@
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+<script type="text/javascript">
+
+    {#  responsive for small screen #}
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        $(".relate-interaction-container").find(".form-control").removeAttr("style");
+    }
+
+    $('[use-popover="true"]').each(function(){
+        const popover = bootstrap.Popover.getOrCreateInstance(this, {
+            trigger: "focus",
+            placement: "top",
+            html: true,
+            title: $(this).attr("popover-title"),
+            content: $(this).attr("popover-content")}
+        );
+
+        {# render TeX in popovers #}
+        this.addEventListener("shown.bs.popover", function () {
+          MathJax.typeset([popover.tip]);
+        });
+    });
+
+    $("[correctness='1']").addClass("is-valid");
+    $("[correctness='0']").addClass("is-invalid");
+
+    {# Remove feedback icons/styles when answer is edited #}
+    $(".relate-interaction-container> * :input.is-valid,:input.is-invalid")
+        .on("change paste", function () {
+            $(this).removeClass("is-valid is-invalid");
+        });
+
+</script>

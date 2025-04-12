@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>{% trans "Available Exams" %}</h1>
+
+  {% if exams %}
+    <ul class="list-unstyled">
+      {% for exam in exams %}
+        <li>
+          <i>{{ exam.course.number }}
+            {{ exam.course.time_period }}</i>
+          ({{ exam.course.name }}):
+          <b>{{ exam.description }}</b>
+
+          <a
+            class="btn btn-primary"
+            href="{% url 'relate-view_start_flow' exam.course.identifier exam.flow_id %}"
+            role="button"
+            style="margin-left:1em">{% trans "Take exam" %} &raquo;</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% if user.is_authenticated %}
+        {% trans "(No exams available.)" %}
+    {% else %}
+        {% trans "(No exams available. Please sign in to continue.)" %}
+    {% endif %}
+  {% endif %}
+{% endblock %}

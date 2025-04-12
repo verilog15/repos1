@@ -1,0 +1,11 @@
+{% load i18n %}{% blocktrans trimmed with username=user.get_email_appellation %}Dear {{username}},{% endblocktrans %}
+{% blocktrans with RELATE=relate_site_name sign_in_uri=sign_in_uri home_uri=home_uri %}
+Welcome to {{ RELATE }}! Please click this link to sign in:
+{{ sign_in_uri }}
+
+You have received this email because someone (maybe you) entered your email address into the {{ RELATE }} web site at
+{{ home_uri }}
+
+If this was not you, it is safe to disregard this email.
+{% endblocktrans %}
+- {% blocktrans %}{{ relate_site_name }} staff{% endblocktrans %}

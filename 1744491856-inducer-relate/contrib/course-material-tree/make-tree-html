@@ -1,0 +1,462 @@
+#! /usr/bin/env python3
+
+from __future__ import print_function
+from os.path import join, basename
+from urllib.parse import quote_plus
+from glob import glob
+import re
+
+
+section_nr = [1]
+
+
+def rewrite_org_element(args, org_el):
+    el_type = org_el[0]
+    org_props = org_el[1]
+    assert org_props is None or isinstance(org_props, dict)
+    contents = org_el[2:]
+
+    had_relate_properties = False
+    promote_to_parent_level = False
+    node_props = {}
+    if el_type == "org-data":
+        title, = [
+                subel[1]["key"]
+                for el in contents
+                if el[0] == "section"
+                for subel in el[2:]
+                if subel[0] == "keyword"
+                if subel[1]["key"] == "TITLE"]
+        node_props["text"] = title
+
+    elif el_type == "headline":
+        node_props["text"] = org_props["raw-value"]
+
+        prop_container = [
+                subel[2:]
+                for el in contents
+                if el[0] == "section"
+                for subel in el[2:]
+                if subel[0] == "property-drawer"]
+
+        if prop_container:
+            prop_kws = prop_container[0]
+        else:
+            prop_kws = []
+
+        properties = {
+                ch[1]["key"]: ch[1]["value"]
+                for ch in prop_kws
+                if ch[0] == "node-property"
+                }
+
+        had_relate_properties = had_relate_properties or any(
+                key.startswith("RELATE_") for key in properties)
+
+        if "RELATE_TREE_SECTION_NAME" in properties:
+            node_props["section"] = properties["RELATE_TREE_SECTION_NAME"]
+        if "RELATE_TREE_SECTION_OPENED" in properties:
+            node_props["opened"] = properties["RELATE_TREE_SECTION_OPENED"]
+        if "RELATE_TREE_ICON" in properties:
+            node_props["icon"] = properties["RELATE_TREE_ICON"]
+        if "RELATE_TREE_LINK" in properties:
+            node_props["link"] = properties["RELATE_TREE_LINK"]
+        if "RELATE_PROMOTE_TO_PARENT_LEVEL" in properties:
+            promote_to_parent_level = True
+
+    if el_type == "org-data":
+        level = 0
+    else:
+        level = org_props.get("level")
+
+    if ("text" in node_props
+            and level is not None
+            and level < len(args.org_level_icon)):
+        node_props["icon"] = args.org_level_icon[level]
+
+    siblings = []
+    children = []
+    node_props["nodes"] = children
+
+    for ch in contents:
+        if isinstance(ch, list):
+            child_props, child_siblings, promote_child_to_parent_level = \
+                    rewrite_org_element(args, ch)
+            if "text" in child_props:
+                if promote_child_to_parent_level:
+                    siblings.append(child_props)
+                else:
+                    children.append(child_props)
+
+            children.extend(child_siblings)
+
+    if args.org_stop_level:
+        if (level is not None
+                and level > args.org_stop_level
+                and not had_relate_properties):
+            node_props = {}
+
+    if el_type == "headline" and org_props["todo-keyword"] is not None:
+        node_props = {}
+    if (el_type == "headline"
+            and org_props["tags"] is not None
+            and "noexport" in org_props["tags"]):
+        node_props = {}
+
+    return node_props, siblings, promote_to_parent_level
+
+
+def load_org_json(args, infile_name):
+    # https://github.com/ludios/org-to-json
+
+    from json import loads
+    with open(infile_name, "rb") as inf:
+        json = loads(inf.read())
+
+    node_props, siblings, promote_to_parent_level = \
+            rewrite_org_element(args, json)
+    assert not siblings
+    assert not promote_to_parent_level
+    return node_props
+
+
+def normalize_nodes(nodes, text_icon):
+    for i in range(len(nodes)):
+        node = nodes[i]
+        if isinstance(node, str):
+            node = {"text": node, "icon": text_icon}
+
+        assign_section_number = False
+
+        if "section_nr" in node and node["section_nr"] is not False:
+            if node["section_nr"] is True:
+                assign_section_number = True
+            else:
+                section_nr[0] = node["section_nr"]
+
+        if "section" in node:
+            if node.get("section_nr") is not False:
+                assign_section_number = True
+
+        if assign_section_number:
+            node["section_nr"] = section_nr[0]
+            section_nr[0] += 1
+
+        nodes[i] = node
+
+        if "nodes" in node:
+            normalize_nodes(node["nodes"], text_icon)
+
+
+def find_section_nodes(section_dict, node):
+    if "section" in node:
+        section_dict[node["section"]] = node
+
+    for subnode in node.get("nodes", []):
+        find_section_nodes(section_dict, subnode)
+
+
+class RenderSettings:
+    def __init__(self, default_icon, number_sections, tree_replacements):
+        self.default_icon = default_icon
+        self.number_sections = number_sections
+        self.tree_replacements = tree_replacements
+
+    def apply_replacements(self, s):
+        for key, val in self.tree_replacements.items():
+            s = s.replace(key, val)
+
+        return s
+
+
+def render(settings, outf, node, indent=0, skip=1):
+    attrs = {}
+
+    icon = settings.default_icon
+    if "icon" in node:
+        icon = node["icon"]
+    attrs["icon"] = icon
+
+    if "opened" in node and int(bool(node["opened"])):
+        attrs["opened"] = True
+
+    text = node["text"]
+    if (settings.number_sections
+            and "section_nr" in node
+            and node["section_nr"] is not False):
+        text = "%d. %s" % (node["section_nr"], text)
+    if "section" in node:
+        text = "<b>%s</b>" % text
+
+    if not skip:
+        from json import dumps
+        print(
+            indent * " ",
+            "<li data-jstree='%s'>" % dumps(attrs, sort_keys=True).replace("'", '"'),
+            file=outf, sep="")
+        indent += 2
+        if "link" in node:
+            print(
+                indent * " ",
+                '<a href="%s">%s</a>' % (
+                    settings.apply_replacements(node["link"]),
+                    settings.apply_replacements(text)),
+                file=outf, sep="")
+        else:
+            print(
+                    indent * " ",
+                    settings.apply_replacements(text), file=outf, sep="")
+
+    subnodes = node.get("nodes", [])
+    if subnodes:
+        print(indent * " ", "<ul>", file=outf, sep="")
+        indent += 2
+        for subnode in subnodes:
+            render(settings, outf, subnode, indent, skip=max(0, skip - 1))
+        indent -= 2
+        print(indent * " ", "</ul>", file=outf, sep="")
+
+    if not skip:
+        indent -= 2
+        print(indent * " ", "</li>", file=outf, sep="")
+
+
+FN_REGEX = re.compile(r"^([0-9]+)-(.*)(\.[a-z]+)$")
+
+
+def get_section_id_and_display_name(trunk, include_extension):
+    from os.path import splitext
+
+    fn_match = FN_REGEX.match(trunk)
+    if fn_match is not None:
+        section_id = fn_match.group(1)
+        if include_extension:
+            fname = fn_match.group(2) + fn_match.group(3)
+        else:
+            fname = fn_match.group(2)
+        display_name = basename(fname)
+    else:
+        section_id, display_name = trunk.split("/")
+
+        if not include_extension:
+            display_name, _ = splitext(display_name)
+
+    try:
+        section_id = int(section_id)
+    except ValueError:
+        pass
+
+    return section_id, display_name
+
+
+def blacklisted_glob(basedir, pattern, blacklist_regexps):
+    return sorted(
+            name
+            for name in glob(join(basedir, pattern))
+            if not any(bl_re.match(name[len(basedir)+1:])
+                for bl_re in blacklist_regexps))
+
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+            description="Turn a YAML file into a jsTree-compatible data file")
+
+    parser.add_argument("-o", "--output-file", metavar="FILE", required=True)
+
+    parser.add_argument("--ipynb-dir", metavar="DIRECTORY")
+    parser.add_argument("--ipynb-urlroot", metavar="URL",
+            help="(without the trailing slash)")
+    parser.add_argument("--ipynb-as-py", action="store_true")
+    parser.add_argument("--ipynb-as-ipynb", action="store_true")
+
+    parser.add_argument("--interactive-nb-urlroot", metavar="URL",
+            help="(without the trailing slash)")
+    parser.add_argument("--interactive-nb-cleared-urlroot", metavar="URL",
+            help="(without the trailing slash)")
+    parser.add_argument("--ipynb-main-link",
+            choices=["static", "interactive", "interactive-cleared"],
+            default="static")
+
+    parser.add_argument("--source-dir", metavar="DIRECTORY")
+    parser.add_argument("--source-urlroot", metavar="URL",
+            help="(without the trailing slash)")
+    parser.add_argument("--source-wildcard", metavar="WILDCARD", nargs="*")
+
+    parser.add_argument("--pdf-dir", metavar="DIRECTORY")
+    parser.add_argument("--pdf-urlroot", metavar="URL",
+            help="(without the trailing slash)")
+
+    parser.add_argument("--default-icon", metavar="ICON_STR",
+            default="bi bi-file-earmark")
+    parser.add_argument("--text-icon", metavar="ICON_STR",
+            default="bi bi-file-earmark")
+    parser.add_argument("--number-sections", action="store_true")
+    parser.add_argument("--blacklist-file", metavar="PATTERN_FILE")
+
+    parser.add_argument("--org-stop-level", metavar="INT", type=int)
+    parser.add_argument("--org-level-icon", metavar="CSS_CLASSES", nargs="*")
+
+    parser.add_argument("--tree-replacement", metavar="KEY=VALUE", nargs="*")
+
+    parser.add_argument("input_file", metavar="FILE")
+
+    args = parser.parse_args()
+
+    blacklist_regexps = []
+    if args.blacklist_file is not None:
+        with open(args.blacklist_file, "rt") as bl_file:
+            import fnmatch
+            for pattern in bl_file:
+                blacklist_regexps.append(
+                        re.compile(fnmatch.translate(pattern.strip())))
+
+    if args.input_file.endswith(".yml") or args.input_file.endswith(".yml"):
+        from yaml import safe_load
+        with open(args.input_file, "rb") as inf:
+            root_node = safe_load(inf)
+    elif args.input_file.endswith(".org.json"):
+        root_node = load_org_json(args, args.input_file)
+    else:
+        raise ValueError("unknown extension of input file: %s" % args.input_file)
+
+    normalize_nodes([root_node], args.text_icon)
+
+    tree_replacements = {}
+    if args.tree_replacement is not None:
+        for tr in args.tree_replacement:
+            eq_ind = tr.find("=")
+            if eq_ind < 0:
+                raise ValueError(f"tree replacement '{tr}' contains no equal sign")
+            tree_replacements[tr[:eq_ind]] = tr[eq_ind+1:]
+
+    section_dict = {}
+    find_section_nodes(section_dict, root_node)
+
+    # {{{ demos
+
+    if args.ipynb_dir is not None:
+        for fn in blacklisted_glob(args.ipynb_dir, join("*", "*.ipynb"),
+                blacklist_regexps):
+            trunk = fn[len(args.ipynb_dir)+1:]
+
+            section_id, display_name = get_section_id_and_display_name(
+                    trunk, include_extension=False)
+
+            link_ipynb = args.ipynb_urlroot + "/" + trunk
+            link_html = link_ipynb.replace(".ipynb", ".html")
+            main_link = link_html
+
+            sub_nodes = [{
+                        "text": "View on the web",
+                        "link": link_html,
+                        "icon": "bi bi-newspaper",
+                        }]
+
+            if args.interactive_nb_urlroot:
+                interactive_nb_url = args.interactive_nb_urlroot + quote_plus(trunk)
+
+                sub_nodes.append({
+                    "text": "Run interactively",
+                    "link": interactive_nb_url,
+                    "icon": "bi bi-keyboard",
+                    })
+                if args.ipynb_main_link == "interactive":
+                    main_link = interactive_nb_url
+
+            if args.interactive_nb_cleared_urlroot:
+                interactive_nb_url = (args.interactive_nb_cleared_urlroot
+                                      + quote_plus(trunk))
+
+                sub_nodes.append({
+                    "text": "Run interactively with cleared input",
+                    "link": interactive_nb_url,
+                    "icon": "bi bi-keyboard",
+                    })
+                if args.ipynb_main_link == "interactive-cleared":
+                    main_link = interactive_nb_url
+
+            if args.ipynb_as_py:
+                link_py = link_ipynb.replace(".ipynb", ".py")
+                sub_nodes.append({
+                    "text": "Download Python script",
+                    "link": link_py,
+                    "icon": "bi bi-terminal",
+                    })
+
+            if args.ipynb_as_ipynb:
+                sub_nodes.append({
+                    "text": "Download Jupyter notebook",
+                    "link": link_ipynb,
+                    "icon": "bi bi-download",
+                    })
+
+            demo_node = {
+                "text": "Demo: " + display_name,
+                "link": main_link,
+                "icon": "bi bi-keyboard",
+                "nodes": sub_nodes,
+                }
+
+            if section_id in section_dict:
+                section_dict[section_id]["nodes"].append(demo_node)
+
+    # }}}
+
+    # {{{ general source files
+
+    if args.source_dir is not None:
+        for source_wildcard in args.source_wildcard:
+            for fn in blacklisted_glob(args.source_dir, join("*", source_wildcard),
+                    blacklist_regexps):
+                trunk = fn[len(args.source_dir)+1:]
+                section_id, display_name = get_section_id_and_display_name(
+                        trunk, include_extension=True)
+
+                src_node = {
+                    "text": "Code: " + display_name,
+                    "link": args.source_urlroot + "/" + trunk,
+                    "icon": "bi bi-file-earmark-text",
+                }
+                if section_id in section_dict:
+                    section_dict[section_id]["nodes"].append(src_node)
+
+    # }}}
+
+    # {{{ notes
+
+    if args.pdf_dir is not None:
+        for fn in blacklisted_glob(args.pdf_dir, join("*.pdf"),
+                blacklist_regexps):
+            if "autosave" in fn:
+                continue
+
+            trunk = fn[len(args.pdf_dir)+1:]
+            section_id, display_name = get_section_id_and_display_name(
+                    trunk, include_extension=True)
+
+            notes_node = {
+                "text": "PDF: " + basename(display_name),
+                "link": args.pdf_urlroot + "/" + trunk,
+                "icon": "bi bi-book",
+                }
+
+            if section_id in section_dict:
+                section_dict[section_id]["nodes"].insert(0, notes_node)
+
+    # }}}
+
+    with open(args.output_file, "wt", encoding="utf-8") as outf:
+        render(
+                RenderSettings(
+                    default_icon=args.default_icon,
+                    number_sections=args.number_sections,
+                    tree_replacements=tree_replacements),
+                outf, root_node)
+
+
+if __name__ == "__main__":
+    main()
+
+# vim: foldmethod=marker

@@ -1,0 +1,35 @@
+{% load i18n %}
+
+{% if log_lines %}
+  <div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i>
+    <ul>
+    {% for line in log_lines %}
+    <li>{{ line }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+{% if show_grade_changes %}
+  <div class="relate-well">
+  <h2 class="start-well-title">{% trans "Preview" %}</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>{% trans "User" %}</th>
+        <th>{% trans "Grade" %}</th>
+        <th>{% trans "Feedback" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for gchange in grade_changes %}
+        <tr>
+          <td>{{ gchange.participation.user }}</td>
+          <td>{{ gchange.points }}</td>
+          <td>{{ gchange.comment }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+{% endif %}
