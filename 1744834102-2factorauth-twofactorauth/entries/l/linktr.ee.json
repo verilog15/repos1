@@ -1,0 +1,13 @@
+{
+  "Linktree": {
+    "domain": "linktr.ee",
+    "tfa": [
+      "sms",
+      "call"
+    ],
+    "documentation": "https://linktr.ee/help/articles/6108442",
+    "categories": [
+      "social"
+    ]
+  }
+}

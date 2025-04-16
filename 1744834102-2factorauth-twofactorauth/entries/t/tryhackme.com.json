@@ -1,0 +1,12 @@
+{
+  "TryHackMe": {
+    "domain": "tryhackme.com",
+    "tfa": [
+     "totp"
+    ],
+    "categories": [
+      "security",
+      "education"
+    ]
+  }
+}

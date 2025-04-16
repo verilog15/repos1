@@ -1,0 +1,22 @@
+{
+  "US Veteran Affairs": {
+    "domain": "va.gov",
+    "tfa": [
+      "sms",
+      "call",
+      "totp",
+      "u2f",
+      "custom-software"
+    ],
+    "custom-software": [
+      "ID.me Authenticator"
+    ],
+    "documentation": "https://www.va.gov/resources/verifying-your-identity-on-vagov",
+    "categories": [
+      "government"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

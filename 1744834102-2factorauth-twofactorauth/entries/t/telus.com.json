@@ -1,0 +1,18 @@
+{
+  "Telus": {
+    "domain": "telus.com",
+    "tfa": [
+      "custom-software"
+    ],
+    "custom-software": [
+      "My TELUS App"
+    ],
+    "documentation": "https://www.telus.com/en/support/article/my-telus-2-step-verification",
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "ca"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Virgin Media [IE]": {
+    "domain": "virginmedia.ie",
+    "img": "virginmedia.svg",
+    "contact": {
+      "facebook": "VirginMediaIreland",
+      "twitter": "VirginMediaIE"
+    },
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "ie"
+    ]
+  }
+}

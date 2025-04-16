@@ -1,0 +1,13 @@
+{
+  "Epik": {
+    "domain": "epik.com",
+    "url": "https://www.epik.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.epik.com/hc/en-us/articles/10721574479771",
+    "categories": [
+      "domains"
+    ]
+  }
+}

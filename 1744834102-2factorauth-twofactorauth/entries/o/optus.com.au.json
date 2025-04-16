@@ -1,0 +1,16 @@
+{
+  "Optus": {
+    "domain": "optus.com.au",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "documentation": "https://www.optus.com.au/support/answer?id=20183",
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "au"
+    ]
+  }
+}

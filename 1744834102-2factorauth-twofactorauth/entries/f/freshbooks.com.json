@@ -1,0 +1,22 @@
+{
+  "FreshBooks": {
+    "domain": "freshbooks.com",
+    "tfa": [
+      "email"
+    ],
+    "documentation": "https://www.freshbooks.com/blog/2fa-two-factor-authentication",
+    "categories": [
+      "finance"
+    ],
+    "regions": [
+      "au",
+      "ca",
+      "fr",
+      "mx",
+      "ie",
+      "za",
+      "gb",
+      "us"
+    ]
+  }
+}

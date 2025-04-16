@@ -1,0 +1,13 @@
+{
+  "PowerReviews": {
+    "domain": "powerreviews.com",
+    "url": "https://www.powerreviews.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.powerreviews.com/hc/en-us/articles/7277746655771",
+    "categories": [
+      "marketing"
+    ]
+  }
+}

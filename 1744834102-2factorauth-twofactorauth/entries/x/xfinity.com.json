@@ -1,0 +1,24 @@
+{
+  "Xfinity": {
+    "domain": "xfinity.com",
+    "additional-domains": [
+      "comcast.com"
+    ],
+    "custom-software": [
+      "Xfinity Authenticator"
+    ],
+    "documentation": "https://www.xfinity.com/support/articles/two-step-verification-xfinity-app-setup/",
+    "tfa": [
+      "sms",
+      "email",
+      "custom-software"
+    ],
+    "notes": "Email 2FA requires the use of a non-Comcast.net email address.",
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

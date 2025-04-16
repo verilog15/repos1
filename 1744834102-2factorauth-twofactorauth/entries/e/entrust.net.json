@@ -1,0 +1,19 @@
+{
+  "Entrust": {
+    "domain": "entrust.net",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Entrust IdentityGuard"
+    ],
+    "custom-hardware": [
+      "eGrid"
+    ],
+    "documentation": "https://www.entrust.com/knowledgebase/ssl/multifactor-authentication-faq",
+    "categories": [
+      "security"
+    ]
+  }
+}

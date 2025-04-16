@@ -1,0 +1,23 @@
+{
+  "TARGOBANK": {
+    "domain": "targobank.de",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "photoTAN card reader"
+    ],
+    "custom-software": [
+      "TARGOBANK Mobile Banking"
+    ],
+    "documentation": "https://www.targobank.de/de/service/tan-verfahren/index.html",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

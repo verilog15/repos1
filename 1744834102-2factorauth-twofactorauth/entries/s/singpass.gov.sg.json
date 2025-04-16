@@ -1,0 +1,24 @@
+{
+  "SingPass": {
+    "domain": "singpass.gov.sg",
+    "url": "https://www.singpass.gov.sg/",
+    "tfa": [
+      "sms",
+	  "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Singpass app"
+    ],
+    "custom-hardware": [
+      "Biometrics"
+    ],
+    "documentation": "https://www.singpass.gov.sg/main/html/faq.html",
+    "categories": [
+      "government"
+    ],
+    "regions": [
+      "sg"
+    ]
+  }
+}

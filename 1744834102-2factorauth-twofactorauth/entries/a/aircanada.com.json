@@ -1,0 +1,16 @@
+{
+  "Air Canada": {
+    "domain": "aircanada.com",
+    "tfa": [
+      "email",
+      "sms"
+    ],
+    "documentation": "https://www.aircanada.com/ca/en/aco/home/customer-profile/frequently-asked-questions.html#/tab_tfa-faq-tabs_title_2",
+    "categories": [
+      "travel"
+    ],
+    "regions": [
+      "ca"
+    ]
+  }
+}

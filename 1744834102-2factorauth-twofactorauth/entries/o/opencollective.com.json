@@ -1,0 +1,13 @@
+{
+  "Open Collective": {
+    "domain": "opencollective.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://docs.opencollective.com/help/product/two-factor-authentication",
+    "categories": [
+      "crowdfunding"
+    ]
+  }
+}

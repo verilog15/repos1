@@ -1,0 +1,15 @@
+{
+  "Interia": {
+    "domain": "interia.pl",
+    "contact": {
+      "email": "pomoc@firma.interia.pl",
+      "facebook": "interia"
+    },
+    "categories": [
+      "email"
+    ],
+    "regions": [
+      "pl"
+    ]
+  }
+}

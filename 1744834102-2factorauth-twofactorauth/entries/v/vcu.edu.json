@@ -1,0 +1,23 @@
+{
+  "Virginia Commonwealth University": {
+    "domain": "vcu.edu",
+    "tfa": [
+      "custom-software",
+      "custom-hardware",
+      "u2f"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Duo D100 Token"
+    ],
+    "documentation": "https://ts.vcu.edu/askit/essential-computing/information-security/2factor/",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

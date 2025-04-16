@@ -1,0 +1,17 @@
+{
+  "Australia and New Zealand Banking Group": {
+    "domain": "anz.com.au",
+    "contact": {
+      "facebook": "ANZAustralia",
+      "twitter": "ANZ_AU",
+      "form": "https://www.anz.com.au/support/contact-us/complaints/complaint-form/"
+    },
+    "regions": [
+      "au",
+      "nz"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

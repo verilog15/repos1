@@ -1,0 +1,13 @@
+{
+  "KnownHost": {
+    "domain": "knownhost.com",
+    "url": "https://www.knownhost.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://www.knownhost.com/wiki/my-knownhost/two-factor",
+    "categories": [
+      "hosting"
+    ]
+  }
+}

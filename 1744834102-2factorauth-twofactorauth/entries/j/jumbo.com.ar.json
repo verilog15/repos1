@@ -1,0 +1,17 @@
+{
+  "Jumbo [AR]": {
+    "domain": "jumbo.com.ar",
+    "url": "https://www.jumbo.com.ar",
+    "contact": {
+      "facebook": "JumboArgentina",
+      "twitter": "JumboArg",
+      "language": "es"
+    },
+    "regions": [
+      "ar"
+    ],
+    "categories": [
+      "retail"
+    ]
+  }
+}

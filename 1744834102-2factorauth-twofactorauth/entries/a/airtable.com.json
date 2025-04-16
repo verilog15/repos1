@@ -1,0 +1,16 @@
+{
+  "Airtable": {
+    "domain": "airtable.com",
+    "tfa": [
+      "sms",
+      "call",
+      "totp"
+    ],
+    "documentation": "https://support.airtable.com/docs/enabling-two-factor-authentication",
+    "recovery": "https://support.airtable.com/docs/enabling-two-factor-authentication#faqs",
+    "notes": "SMS must be enabled first and software 2FA can be bypassed by SMS.",
+    "categories": [
+      "task"
+    ]
+  }
+}

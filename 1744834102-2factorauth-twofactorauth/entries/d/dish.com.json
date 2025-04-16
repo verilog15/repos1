@@ -1,0 +1,15 @@
+{
+  "DISH Network": {
+    "domain": "dish.com",
+    "contact": {
+      "facebook": "DISH",
+      "twitter": "dish_answers"
+    },
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

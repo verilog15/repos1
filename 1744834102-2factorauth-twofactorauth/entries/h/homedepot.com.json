@@ -1,0 +1,17 @@
+{
+  "Home Depot": {
+    "domain": "homedepot.com",
+    "contact": {
+      "facebook": "homedepot",
+      "twitter": "HDCares"
+    },
+    "regions": [
+      "us",
+      "ca",
+      "mx"
+    ],
+    "categories": [
+      "retail"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Hushmail": {
+    "domain": "hushmail.com",
+    "url": "https://www.hushmail.com",
+    "tfa": [
+      "sms",
+      "email",
+      "totp"
+    ],
+    "documentation": "https://help.hushmail.com/article/740--",
+    "categories": [
+      "email"
+    ]
+  }
+}

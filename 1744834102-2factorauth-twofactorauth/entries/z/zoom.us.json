@@ -1,0 +1,14 @@
+{
+  "Zoom": {
+    "domain": "zoom.us",
+    "url": "https://www.zoom.us",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://support.zoom.com/hc/article?id=zm_kb&sysparm_article=KB0066054",
+    "categories": [
+      "communication"
+    ]
+  }
+}

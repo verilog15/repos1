@@ -1,0 +1,13 @@
+{
+  "Grammarly": {
+    "domain": "grammarly.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://support.grammarly.com/hc/en-us/articles/360032922091",
+    "categories": [
+      "other"
+    ]
+  }
+}

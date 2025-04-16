@@ -1,0 +1,13 @@
+{
+  "Checkfront": {
+    "domain": "checkfront.com",
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://support.checkfront.com/hc/en-us/articles/115003849053",
+    "categories": [
+      "other"
+    ]
+  }
+}

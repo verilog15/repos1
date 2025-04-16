@@ -1,0 +1,18 @@
+{
+  "State Farm": {
+    "domain": "statefarm.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "documentation": "https://www.statefarm.com/customer-care/privacy-security/security",
+    "categories": [
+      "banking",
+      "insurance",
+      "investing"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

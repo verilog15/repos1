@@ -1,0 +1,12 @@
+{
+  "CoinMarketCap": {
+    "domain": "coinmarketcap.com",
+    "tfa": [
+      "totp",
+      "email"
+    ],
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

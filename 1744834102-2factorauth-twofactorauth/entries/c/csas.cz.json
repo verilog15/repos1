@@ -1,0 +1,20 @@
+{
+  "Ceska Sporitelna": {
+    "domain": "csas.cz",
+    "url": "https://www.csas.cz/en/",
+    "tfa": [
+      "sms",
+      "custom-software"
+    ],
+    "custom-software": [
+      "George Ceska Sporitelna"
+    ],
+    "documentation": "https://www.csas.cz/cs/mobilni-aplikace/george-klic",
+    "regions": [
+      "cz"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

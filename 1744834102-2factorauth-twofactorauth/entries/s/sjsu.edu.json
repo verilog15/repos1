@@ -1,0 +1,25 @@
+{
+  "San José State University": {
+    "domain": "sjsu.edu",
+    "additional-domains": [
+      "sjsu.okta.com"
+    ],
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Feitian OTP c100 Token"
+    ],
+    "documentation": "https://sjsu.edu/it/security/multi-factor/duo-setup.php",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "Google Nest": {
+    "domain": "nest.com",
+    "additional-domains": [
+      "nest.google.com"
+    ],
+    "tfa": [
+      "sms",
+      "call",
+      "totp",
+      "custom-software",
+      "u2f"
+    ],
+    "custom-software": [
+      "Google Prompts",
+      "Google Smart Lock"
+    ],
+    "notes": "Non-migrated accounts only have SMS & Email 2FA available.",
+    "documentation": "https://support.google.com/googlenest/answer/9295081",
+    "categories": [
+      "iot"
+    ]
+  }
+}

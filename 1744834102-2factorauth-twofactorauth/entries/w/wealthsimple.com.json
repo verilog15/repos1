@@ -1,0 +1,20 @@
+{
+  "Wealthsimple": {
+    "domain": "wealthsimple.com",
+    "additional-domains": [
+      "simpletax.ca"
+    ],
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.wealthsimple.com/hc/en-ca/articles/360056584134",
+    "categories": [
+      "finance",
+      "investing"
+    ],
+    "regions": [
+      "ca"
+    ]
+  }
+}

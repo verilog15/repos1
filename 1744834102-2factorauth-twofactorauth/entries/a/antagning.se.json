@@ -1,0 +1,15 @@
+{
+  "Antagning.se": {
+    "domain": "antagning.se",
+    "contact": {
+      "twitter": "antagningse"
+    },
+    "categories": [
+      "education",
+      "universities"
+    ],
+    "regions": [
+      "se"
+    ]
+  }
+}

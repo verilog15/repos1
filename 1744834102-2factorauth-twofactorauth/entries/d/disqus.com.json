@@ -1,0 +1,13 @@
+{
+  "Disqus": {
+    "domain": "disqus.com",
+    "tfa": [
+      "email",
+      "totp"
+    ],
+    "documentation": "https://help.disqus.com/articles/9768685",
+    "categories": [
+      "communication"
+    ]
+  }
+}

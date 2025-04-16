@@ -1,0 +1,13 @@
+{
+  "Lenovo": {
+    "domain": "lenovo.com",
+    "tfa": [
+      "email",
+      "sms",
+      "totp"
+    ],
+    "categories": [
+      "retail"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "CIBC": {
+    "domain": "cibc.com",
+    "tfa": [
+      "call",
+      "sms",
+      "custom-software"
+    ],
+    "custom-software": [
+      "CIBC app"
+    ],
+    "documentation": "https://www.cibc.com/en/privacy-security/two-step-verification.html",
+    "regions": [
+      "ca"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

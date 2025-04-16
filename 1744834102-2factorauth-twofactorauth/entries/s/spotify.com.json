@@ -1,0 +1,13 @@
+{
+  "Spotify": {
+    "domain": "spotify.com",
+    "contact": {
+      "facebook": "spotify",
+      "twitter": "SpotifyCares",
+      "email": "support@spotify.com"
+    },
+    "categories": [
+      "entertainment"
+    ]
+  }
+}

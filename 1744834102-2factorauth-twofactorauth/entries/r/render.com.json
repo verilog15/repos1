@@ -1,0 +1,12 @@
+{
+  "Render": {
+    "domain": "render.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "cloud",
+      "hosting"
+    ]
+  }
+}

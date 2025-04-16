@@ -1,0 +1,13 @@
+{
+  "Snapchat": {
+    "domain": "snapchat.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.snapchat.com/hc/sections/5685887734676",
+    "categories": [
+      "social"
+    ]
+  }
+}

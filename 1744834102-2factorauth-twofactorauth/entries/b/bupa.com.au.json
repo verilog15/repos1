@@ -1,0 +1,15 @@
+{
+  "Bupa": {
+    "domain": "bupa.com.au",
+    "tfa": [
+      "email"
+    ],
+    "documentation": "https://www.bupa.com.au/help/privacy-and-security-trust-centre/mybupa-and-digital-security",
+    "categories": [
+      "insurance"
+    ],
+    "regions": [
+      "au"
+    ]
+  }
+}

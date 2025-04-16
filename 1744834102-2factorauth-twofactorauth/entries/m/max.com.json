@@ -1,0 +1,45 @@
+{
+  "Max": {
+    "domain": "max.com",
+    "additional-domains": [
+      "hbomax.com"
+    ],
+    "contact": {
+      "facebook": "streamonmax",
+      "twitter": "StreamOnMax",
+      "form": "https://help.max.com/Feedback/index"
+    },
+    "categories": [
+      "entertainment"
+    ],
+    "regions": [
+      "ar",
+      "au",
+      "br",
+      "bg",
+      "cl",
+      "co",
+      "cr",
+      "hr",
+      "ec",
+      "fr",
+      "gr",
+      "hk",
+      "hu",
+      "jp",
+      "mx",
+      "nz",
+      "pe",
+      "pl",
+      "pt",
+      "ro",
+      "sg",
+      "sk",
+      "si",
+      "es",
+      "se",
+      "tw",
+      "us"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Cloudflare": {
+    "domain": "cloudflare.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://developers.cloudflare.com/fundamentals/setup/account/account-security/2fa/",
+    "categories": [
+      "security",
+      "developer",
+      "domains"
+    ]
+  }
+}

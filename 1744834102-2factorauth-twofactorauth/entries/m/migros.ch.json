@@ -1,0 +1,25 @@
+{
+  "Migros": {
+    "domain": "migros.ch",
+    "tfa": [
+      "sms",
+      "totp",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Migros Access app"
+    ],
+    "documentation": "https://account.migros.ch/help#secureWhy2FactorPassword",
+    "categories": [
+      "retail"
+    ],
+    "regions": [
+      "at",
+      "de",
+      "ch",
+      "fr",
+      "it",
+      "li"
+    ]
+  }
+}

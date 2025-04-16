@@ -1,0 +1,11 @@
+{
+  "lichess.org": {
+    "domain": "lichess.org",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "gaming"
+    ]
+  }
+}

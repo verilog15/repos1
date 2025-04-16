@@ -1,0 +1,12 @@
+{
+  "Imgur": {
+    "domain": "imgur.com",
+    "contact": {
+      "twitter": "imgur",
+      "email": "support@imgur.com"
+    },
+    "categories": [
+      "social"
+    ]
+  }
+}

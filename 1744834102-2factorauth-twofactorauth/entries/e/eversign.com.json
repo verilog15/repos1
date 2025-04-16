@@ -1,0 +1,16 @@
+{
+  "Xodo Sign": {
+    "domain": "eversign.com",
+    "additional-domains": [
+      "xodosign.com"
+    ],
+    "contact": {
+      "twitter": "getXodoSign",
+      "facebook": "xodosign",
+      "email": "support@eversign.com"
+    },
+    "categories": [
+      "legal"
+    ]
+  }
+}

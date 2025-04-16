@@ -1,0 +1,12 @@
+{
+  "CoinSmart": {
+    "domain": "coinsmart.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.coinsmart.com/hc/en-us/articles/360014948893",
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

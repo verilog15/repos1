@@ -1,0 +1,12 @@
+{
+  "CoinRemitter": {
+    "domain": "coinremitter.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "payments",
+      "cryptocurrencies"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "McGill University": {
+    "domain": "mcgill.ca",
+    "tfa": [
+      "totp",
+      "custom-software",
+      "sms",
+      "call"
+    ],
+    "custom-software": [
+      "Authy"
+    ],
+    "documentation": "https://mcgill.service-now.com/itportal?id=kb_article_view&sys_kb_id=b1508e941be04910591ca9b7624bcb85",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "ca"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Deutsche Telekom": {
+    "domain": "telekom.de",
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://www.telekom.de/hilfe/vertrag-rechnung/login-daten-passwoerter/mehr-faktor-authentifizierung",
+    "categories": [
+      "utilities"
+    ],
+    "notes": "Software 2FA requires setting up SMS 2FA as a fallback.",
+    "regions": [
+      "de"
+    ]
+  }
+}

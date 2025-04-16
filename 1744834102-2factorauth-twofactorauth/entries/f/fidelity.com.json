@@ -1,0 +1,21 @@
+{
+  "Fidelity Investments": {
+    "domain": "fidelity.com",
+    "tfa": [
+      "sms",
+      "call",
+      "totp",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Fidelity Investments app"
+    ],
+    "documentation": "https://www.fidelity.com/security/extra-security-login",
+    "categories": [
+      "investing"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Buffer": {
+    "domain": "buffer.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://support.buffer.com/hc/en-us/articles/360038349434",
+    "categories": [
+      "social"
+    ]
+  }
+}

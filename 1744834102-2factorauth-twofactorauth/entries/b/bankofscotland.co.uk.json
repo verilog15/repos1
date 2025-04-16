@@ -1,0 +1,20 @@
+{
+  "Bank of Scotland": {
+    "domain": "bankofscotland.co.uk",
+    "tfa": [
+      "custom-software",
+      "call",
+      "sms"
+    ],
+    "custom-software": [
+      "Bank of Scotland Mobile App"
+    ],
+    "documentation": "https://www.bankofscotland.co.uk/aboutonline/changes-to-internet-banking.html",
+    "regions": [
+      "gb"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Optum Bank": {
+    "domain": "optumbank.com",
+    "url": "https://www.optumbank.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "regions": [
+      "us"
+    ],
+    "documentation": "https://www.optumbank.com/support/healthsafe-id-sign-in.html",
+    "categories": [
+      "banking"
+    ]
+  }
+}

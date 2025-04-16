@@ -1,0 +1,13 @@
+{
+  "Box": {
+    "domain": "box.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://support.box.com/hc/en-us/articles/360043697154",
+    "categories": [
+      "backup"
+    ]
+  }
+}

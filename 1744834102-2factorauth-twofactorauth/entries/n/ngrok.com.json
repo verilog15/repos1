@@ -1,0 +1,12 @@
+{
+  "ngrok": {
+    "domain": "ngrok.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "developer",
+      "remote"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Postman": {
+    "domain": "postman.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://learning.postman.com/docs/getting-started/postman-account/#setting-up-two-factor-authentication",
+    "notes": "Can only be used with username/password accounts, not SSO or Google login accounts",
+    "categories": [
+      "developer"
+    ]
+  }
+}

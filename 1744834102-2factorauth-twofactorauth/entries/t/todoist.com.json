@@ -1,0 +1,12 @@
+{
+  "Todoist": {
+    "domain": "todoist.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://todoist.com/help/articles/how-to-enable-two-factor-authentication",
+    "categories": [
+      "task"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "Capital One": {
+    "domain": "capitalone.com",
+    "tfa": [
+      "sms",
+      "email",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Capital One App"
+    ],
+    "documentation": "https://www.capitalone.com/digital/mobile-app-verification/",
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

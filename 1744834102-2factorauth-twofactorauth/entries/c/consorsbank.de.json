@@ -1,0 +1,22 @@
+{
+  "Consorsbank": {
+    "domain": "consorsbank.de",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "SecurePlus card reader"
+    ],
+    "custom-software": [
+      "Consorsbank SecurePlus"
+    ],
+    "documentation": "https://www.consorsbank.de/ev/Service-Beratung/secureplus",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Signal": {
+    "domain": "signal.org",
+    "tfa": [
+      "sms",
+      "call"
+    ],
+    "documentation": "https://support.signal.org/hc/articles/360007059792",
+    "categories": [
+      "communication"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Blacknight": {
+    "domain": "blacknight.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.blacknight.com/hc/en-us/articles/360001358517",
+    "categories": [
+      "hosting"
+    ],
+    "regions": [
+      "ie",
+      "gb"
+    ]
+  }
+}

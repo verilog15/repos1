@@ -1,0 +1,25 @@
+{
+  "OneLogin": {
+    "domain": "onelogin.com",
+    "tfa": [
+      "custom-software",
+      "sms",
+      "totp",
+      "custom-hardware",
+      "u2f"
+    ],
+    "custom-software": [
+      "OneLogin Protect",
+      "Duo",
+      "RSA SecurID",
+      "Symantec VIP"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://support.onelogin.com/kb/4266569",
+    "categories": [
+      "identity"
+    ]
+  }
+}

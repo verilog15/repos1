@@ -1,0 +1,25 @@
+{
+  "Virginia Tech": {
+    "domain": "vt.edu",
+    "tfa": [
+      "sms",
+      "call",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Duo D100 Token",
+      "Yubico OTP"
+    ],
+    "documentation": "https://www.tech.it.vt.edu/2factor/",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "BullionStar": {
+    "domain": "bullionstar.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://www.bullionstar.com/help/2-factor-authentication",
+    "categories": [
+      "investing"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Raiffeisen Bank [CZ]": {
+    "domain": "rb.cz",
+    "contact": {
+      "facebook": "RaiffeisenbankCZ",
+      "twitter": "RaiffeisenCZ",
+      "email": "info@rb.cz",
+      "language": "cs"
+    },
+    "regions": [
+      "cz"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

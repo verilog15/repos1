@@ -1,0 +1,13 @@
+{
+  "Sumo Logic": {
+    "domain": "sumologic.com",
+    "url": "https://www.sumologic.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.sumologic.com/docs/manage/security/about-two-step-verification/",
+    "categories": [
+      "developer"
+    ]
+  }
+}

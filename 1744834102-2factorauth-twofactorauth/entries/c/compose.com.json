@@ -1,0 +1,14 @@
+{
+  "Compose": {
+    "domain": "compose.com",
+    "tfa": [
+      "sms",
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://www.compose.com/articles/introducing-fido-universal-2nd-factor-authentication/",
+    "categories": [
+      "developer"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Servus Credit Union": {
+    "domain": "servus.ca",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://www.servus.ca/security/protect-yourself/two-step-authentication",
+    "regions": [
+      "ca"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

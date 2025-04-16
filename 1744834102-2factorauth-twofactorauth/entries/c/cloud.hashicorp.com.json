@@ -1,0 +1,15 @@
+{
+  "HashiCorp Cloud Platform": {
+    "domain": "cloud.hashicorp.com",
+    "additional-domains": [
+      "auth.hashicorp.com"
+    ],
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://developer.hashicorp.com/hcp/docs/hcp/admin/iam/mfa",
+    "categories": [
+      "cloud"
+    ]
+  }
+}

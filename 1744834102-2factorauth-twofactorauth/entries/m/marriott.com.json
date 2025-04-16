@@ -1,0 +1,14 @@
+{
+  "Marriott": {
+    "domain": "marriott.com",
+    "url": "https://www.marriott.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "documentation": "https://help.marriott.com/s/article/Article-34205",
+    "categories": [
+      "travel"
+    ]
+  }
+}

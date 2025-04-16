@@ -1,0 +1,13 @@
+{
+  "Fiverr": {
+    "domain": "fiverr.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "documentation": "https://www.fiverr.com/support/articles/360010239658",
+    "categories": [
+      "other"
+    ]
+  }
+}

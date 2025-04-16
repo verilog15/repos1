@@ -1,0 +1,13 @@
+{
+  "Voyager": {
+    "domain": "investvoyager.com",
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://investvoyager.zendesk.com/hc/en-us/articles/4407561324699",
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

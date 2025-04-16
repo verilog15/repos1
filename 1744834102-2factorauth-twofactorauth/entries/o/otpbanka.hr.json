@@ -1,0 +1,18 @@
+{
+  "OTP banka": {
+    "domain": "otpbanka.hr",
+    "tfa": [
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "OTP token device"
+    ],
+    "documentation": "https://www.otpbanka.hr/hr/upute/otp-token-upute-za-koristenje",
+    "regions": [
+      "hr"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "Bendigo Bank": {
+    "domain": "bendigobank.com.au",
+    "tfa": [
+      "sms",
+      "email",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Bendigo Bank app"
+    ],
+    "documentation": "https://www.bendigobank.com.au/support/e-banking/multi-factor-authentication",
+    "notes": "If the app hasn't been setup, only SMS and email tokens will work. If the app has been setup, only the app will work.",
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "au"
+    ]
+  }
+}

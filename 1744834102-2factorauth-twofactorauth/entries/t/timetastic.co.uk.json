@@ -1,0 +1,15 @@
+{
+  "Timetastic": {
+    "domain": "timetastic.co.uk",
+    "additional-domains": [
+      "timetastic.us"
+    ],
+    "tfa": [
+        "totp"
+    ],
+    "documentation": "https://help.timetastic.co.uk/hc/en-us/articles/360015994257",
+    "categories": [
+        "other"
+    ]
+  }
+}

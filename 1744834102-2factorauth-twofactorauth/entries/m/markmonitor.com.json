@@ -1,0 +1,19 @@
+{
+  "MarkMonitor": {
+    "domain": "markmonitor.com",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Symantec VIP"
+    ],
+    "custom-hardware": [
+      "Symantec VIP Token"
+    ],
+    "categories": [
+      "domains"
+    ]
+  }
+}

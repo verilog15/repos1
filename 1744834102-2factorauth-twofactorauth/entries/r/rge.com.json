@@ -1,0 +1,15 @@
+{
+  "Rochester Gas and Electric": {
+    "domain": "rge.com",
+    "contact": {
+      "facebook": "RochGandE",
+      "twitter": "RGandE"
+    },
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

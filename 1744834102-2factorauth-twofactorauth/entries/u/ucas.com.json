@@ -1,0 +1,16 @@
+{
+  "UCAS": {
+    "domain": "ucas.com",
+    "contact": {
+      "facebook": "ucasonline",
+      "twitter": "ucas_online"
+    },
+    "categories": [
+      "education",
+      "universities"
+    ],
+    "regions": [
+      "gb"
+    ]
+  }
+}

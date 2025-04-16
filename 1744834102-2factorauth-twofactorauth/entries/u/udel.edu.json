@@ -1,0 +1,22 @@
+{
+  "University of Delaware": {
+    "domain": "udel.edu",
+    "url": "https://www.udel.edu/",
+    "tfa": [
+      "totp",
+      "call",
+      "sms",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Feitian OTP c100 Token"
+    ],
+    "documentation": "https://www1.udel.edu/it/help/2fa/main.html",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

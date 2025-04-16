@@ -1,0 +1,12 @@
+{
+  "Wasabi": {
+    "domain": "wasabi.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://wasabi-support.zendesk.com/hc/en-us/articles/360055164891",
+    "categories": [
+      "backup"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "San Francisco Fire Credit Union": {
+    "domain": "sffirecu.org",
+    "tfa": [
+      "sms",
+      "call",
+      "email",
+      "totp"
+    ],
+    "documentation": "https://sffirecu.org/how-to-use-a-2fa-application",
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

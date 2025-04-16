@@ -1,0 +1,14 @@
+{
+  "Postmates": {
+    "domain": "postmates.com",
+    "contact": {
+      "twitter": "Postmates"
+    },
+    "categories": [
+      "food"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Passpack": {
+    "domain": "passpack.com",
+    "tfa": [
+      "totp",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://passpack.com/support/getting-started/two-factor-authentication/",
+    "recovery": "https://passpack.com/support/faq/",
+    "categories": [
+      "identity"
+    ]
+  }
+}

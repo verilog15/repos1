@@ -1,0 +1,18 @@
+{
+  "FirstBank": {
+    "domain": "efirstbank.com",
+    "tfa": [
+      "custom-software"
+    ],
+    "custom-software": [
+      "FirstBank App"
+    ],
+    "regions": [
+      "us"
+    ],
+    "documentation": "https://www.efirstbank.com/internet-banking/login-options.htm",
+    "categories": [
+      "banking"
+    ]
+  }
+}

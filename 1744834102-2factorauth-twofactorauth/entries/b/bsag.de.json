@@ -1,0 +1,14 @@
+{
+  "Bremer Straßenbahn AG": {
+    "domain": "bsag.de",
+    "contact": {
+      "email": "info@bsag.de"
+    },
+    "categories": [
+      "transport"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

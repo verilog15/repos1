@@ -1,0 +1,19 @@
+{
+  "Deutsche Apotheker- und &Auml;rztebank": {
+    "domain": "apobank.de",
+    "tfa": [
+      "sms",
+      "custom-software"
+    ],
+    "custom-software": [
+      "apoTAN"
+    ],
+    "documentation": "https://www.apobank.de/unsere-leistungen/konto-karte/mobile-banking/apotan",
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

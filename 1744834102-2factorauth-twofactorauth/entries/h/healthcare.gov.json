@@ -1,0 +1,18 @@
+{
+  "Healthcare.gov": {
+    "domain": "healthcare.gov",
+    "tfa": [
+      "sms",
+      "call",
+      "email"
+    ],
+    "documentation": "https://www.healthcare.gov/how-can-i-protect-myself-from-fraud-in-the-health-insurance-marketplace/",
+    "categories": [
+      "government",
+      "insurance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

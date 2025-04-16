@@ -1,0 +1,18 @@
+{
+  "Bank of China [HK]": {
+    "domain": "bochk.com",
+    "tfa": [
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "BOCHK Mobile Banking app"
+    ],
+    "documentation": "https://www.bochk.com/en/security/2factorauthentication.html",
+    "regions": [
+      "hk"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

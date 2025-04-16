@@ -1,0 +1,20 @@
+{
+  "Ubiquiti UniFi": {
+    "domain": "ui.com",
+    "additional-domains": [
+      "ubnt.com"
+    ],
+    "tfa": [
+      "totp",
+      "email",
+      "custom-software"
+    ],
+    "custom-software": [
+      "UI Verify"
+    ],
+    "documentation": "https://help.ui.com/hc/en-us/articles/115012986607",
+    "categories": [
+      "iot"
+    ]
+  }
+}

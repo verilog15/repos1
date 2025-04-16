@@ -1,0 +1,22 @@
+{
+  "Wise": {
+    "domain": "wise.com",
+    "additional-domains": [
+      "transferwise.com"
+    ],
+    "tfa": [
+      "sms",
+      "call",
+      "totp",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Wise App"
+    ],
+    "documentation": "https://wise.com/help/articles/2932125",
+    "notes": "SMS 2FA must be enabled before software methods can be enabled.",
+    "categories": [
+      "finance"
+    ]
+  }
+}

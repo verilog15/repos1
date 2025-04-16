@@ -1,0 +1,13 @@
+{
+  "Nozbe Teams": {
+    "domain": "nozbe.com",
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://nozbe.help/management/settings/#settings_2fa",
+    "categories": [
+      "task"
+    ]
+  }
+}

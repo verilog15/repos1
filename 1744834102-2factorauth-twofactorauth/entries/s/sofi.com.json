@@ -1,0 +1,19 @@
+{
+  "SoFi": {
+    "domain": "sofi.com",
+    "url": "https://www.sofi.com/",
+    "tfa": [
+      "sms",
+      "call",
+      "email",
+      "totp"
+    ],
+    "documentation": "https://support.sofi.com/hc/en-us/articles/9274826655757",
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

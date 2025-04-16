@@ -1,0 +1,15 @@
+{
+  "Pacific Gas and Electric Company": {
+    "domain": "pge.com",
+    "tfa": [
+      "sms",
+      "call"
+    ],
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

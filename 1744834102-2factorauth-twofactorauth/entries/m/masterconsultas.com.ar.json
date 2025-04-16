@@ -1,0 +1,17 @@
+{
+  "MasterCard [AR]": {
+    "domain": "masterconsultas.com.ar",
+    "url": "https://www.masterconsultas.com.ar",
+    "contact": {
+      "facebook": "MastercardArgentina",
+      "twitter": "MastercardArg",
+      "language": "es"
+    },
+    "categories": [
+      "payments"
+    ],
+    "regions": [
+      "ar"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Chartbeat": {
+    "domain": "chartbeat.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.chartbeat.com/hc/en-us/articles/209531888",
+    "categories": [
+      "marketing"
+    ]
+  }
+}

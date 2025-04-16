@@ -1,0 +1,19 @@
+{
+  "Actionstep": {
+    "domain": "actionstep.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.actionstep.com/support/solutions/articles/150000019975",
+    "categories": [
+      "legal"
+    ],
+    "regions": [
+      "au",
+      "gl",
+      "nz",
+      "gb",
+      "us"
+    ]
+  }
+}

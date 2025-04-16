@@ -1,0 +1,16 @@
+{
+  "mailbox.org": {
+    "domain": "mailbox.org",
+    "tfa": [
+      "totp",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://kb.mailbox.org/de/privat/sicherheit-privatsphaere/die-zwei-faktor-authentifizierung-einrichten/",
+    "categories": [
+      "email"
+    ]
+  }
+}

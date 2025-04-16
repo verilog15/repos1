@@ -1,0 +1,16 @@
+{
+  "Instagram": {
+    "domain": "instagram.com",
+    "additional-domains": [
+      "threads.net"
+    ],
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.instagram.com/566810106808145",
+    "categories": [
+      "social"
+    ]
+  }
+}

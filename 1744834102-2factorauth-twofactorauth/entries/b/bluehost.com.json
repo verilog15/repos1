@@ -1,0 +1,14 @@
+{
+  "Bluehost": {
+    "domain": "bluehost.com",
+    "tfa": [
+      "email",
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://www.bluehost.com/help/article/two-factor-authentication",
+    "categories": [
+      "hosting"
+    ]
+  }
+}

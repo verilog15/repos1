@@ -1,0 +1,17 @@
+{
+  "DoorDash": {
+    "domain": "doordash.com",
+    "contact": {
+      "facebook": "DoorDash",
+      "twitter": "DoorDash"
+    },
+    "categories": [
+      "food"
+    ],
+    "regions": [
+      "ca",
+      "us",
+      "au"
+    ]
+  }
+}

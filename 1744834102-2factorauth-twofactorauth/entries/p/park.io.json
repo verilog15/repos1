@@ -1,0 +1,15 @@
+{
+  "Park.io": {
+    "domain": "park.io",
+    "tfa": [
+      "custom-software"
+    ],
+    "custom-software": [
+      "Authy"
+    ],
+    "documentation": "https://park.io/support",
+    "categories": [
+      "domains"
+    ]
+  }
+}

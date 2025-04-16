@@ -1,0 +1,23 @@
+{
+  "norisbank": {
+    "domain": "norisbank.de",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "photoTAN card reader"
+    ],
+    "custom-software": [
+      "norisbank photoTAN"
+    ],
+    "documentation": "https://www.norisbank.de/service/zwei-faktor-authentifizierung.html",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

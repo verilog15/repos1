@@ -1,0 +1,14 @@
+{
+  "Booking.com": {
+    "domain": "booking.com",
+    "tfa": [
+      "sms",
+      "email",
+      "totp"
+    ],
+    "notes": "Setup requires SMS verification. Email is available via 'other options' at login.",
+    "categories": [
+      "travel"
+    ]
+  }
+}

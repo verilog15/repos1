@@ -1,0 +1,28 @@
+{
+  "Deutsche Bahn (DB)": {
+    "domain": "bahn.com",
+    "additional-domains": [
+      "bahn.de"
+    ],
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://www.bahn.de/hilfe/kundenkonto/kundenkonto-2fa",
+    "categories": [
+      "transport"
+    ],
+    "regions": [
+      "at",
+      "be",
+      "cz",
+      "de",
+      "dk",
+      "fr",
+      "it",
+      "lu",
+      "nl",
+      "pl"
+    ]
+  }
+}

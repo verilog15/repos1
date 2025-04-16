@@ -1,0 +1,19 @@
+{
+  "Halifax": {
+    "domain": "halifax.co.uk",
+    "additional-domains": [
+      "halifax-online.co.uk"
+    ],
+    "tfa": [
+      "call",
+      "sms"
+    ],
+    "documentation": "https://www.halifax.co.uk/aboutonline/changes-to-online-banking/",
+    "regions": [
+      "gb"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

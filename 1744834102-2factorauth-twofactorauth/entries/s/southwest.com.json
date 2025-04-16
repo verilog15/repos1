@@ -1,0 +1,26 @@
+{
+  "Southwest": {
+    "domain": "southwest.com",
+    "url": "https://www.southwest.com/",
+    "contact": {
+      "facebook": "SouthwestAir",
+      "twitter": "SouthwestAir"
+    },
+    "categories": [
+      "travel"
+    ],
+    "regions": [
+      "aw",
+      "bs",
+      "bz",
+      "cr",
+      "cu",
+      "do",
+      "jm",
+      "tc",
+      "ky",
+      "us",
+      "mx"
+    ]
+  }
+}

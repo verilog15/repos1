@@ -1,0 +1,16 @@
+{
+  "Cisco Meraki": {
+    "domain": "meraki.cisco.com",
+    "additional-domains": [
+      "meraki.com"
+    ],
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://documentation.meraki.com/General_Administration/Other_Topics/Two-Factor_Authentication",
+    "categories": [
+      "other"
+    ]
+  }
+}

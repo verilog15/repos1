@@ -1,0 +1,16 @@
+{
+  "Vultr": {
+    "domain": "vultr.com",
+    "tfa": [
+      "totp",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://www.vultr.com/docs/using-two-factor-authentication-to-login-to-vultr-control-panel",
+    "categories": [
+      "cloud"
+    ]
+  }
+}

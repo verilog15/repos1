@@ -1,0 +1,21 @@
+{
+  "Trainline": {
+    "domain": "thetrainline.com",
+    "contact": {
+      "facebook": "trainline",
+      "twitter": "thetrainline"
+    },
+    "categories": [
+      "transport"
+    ],
+    "regions": [
+      "de",
+      "nl",
+      "be",
+      "fr",
+      "gb",
+      "it",
+      "es"
+    ]
+  }
+}

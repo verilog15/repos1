@@ -1,0 +1,12 @@
+{
+  "McAfee": {
+    "domain": "mcafee.com",
+    "tfa": [
+      "sms"
+    ],
+    "documentation": "https://www.mcafee.com/support/s/article/000002100",
+    "categories": [
+      "security"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "SJ": {
+    "domain": "sj.se",
+    "tfa": [
+      "sms",
+      "call"
+    ],
+    "categories": [
+      "transport"
+    ],
+    "regions": [
+      "dk",
+      "no",
+      "se"
+    ]
+  }
+}

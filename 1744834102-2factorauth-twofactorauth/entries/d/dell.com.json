@@ -1,0 +1,12 @@
+{
+  "Dell": {
+    "domain": "dell.com",
+    "contact": {
+      "facebook": "Dell",
+      "twitter": "DellCares"
+    },
+    "categories": [
+      "retail"
+    ]
+  }
+}

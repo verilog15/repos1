@@ -1,0 +1,16 @@
+{
+  "WebMD": {
+    "domain": "webmd.com",
+    "url": "https://www.webmd.com",
+    "contact": {
+      "facebook": "WebMD",
+      "twitter": "WebMD"
+    },
+    "categories": [
+      "health"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

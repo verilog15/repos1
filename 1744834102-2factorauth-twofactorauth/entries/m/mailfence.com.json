@@ -1,0 +1,12 @@
+{
+  "Mailfence": {
+    "domain": "mailfence.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://mailfence.com/en/two-factor-authentication.jsp",
+    "categories": [
+      "email"
+    ]
+  }
+}

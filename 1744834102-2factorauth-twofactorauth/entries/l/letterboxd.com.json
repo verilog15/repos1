@@ -1,0 +1,15 @@
+{
+  "Letterboxd": {
+    "domain": "letterboxd.com",
+    "additional-domains": [
+      "ltrbxd.com"
+    ],
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "entertainment",
+      "social"
+    ]
+  }
+}

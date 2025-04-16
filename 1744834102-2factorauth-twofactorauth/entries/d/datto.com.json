@@ -1,0 +1,31 @@
+{
+  "Datto": {
+    "domain": "datto.com",
+    "tfa": [
+      "totp",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "documentation": "https://help.workplace.datto.com/managerhelp/Content/3_ONLINE/Settings/2Factor_Authentication.htm",
+    "categories": [
+      "remote",
+      "iot",
+      "backup"
+    ],
+    "regions": [
+      "au",
+      "ca",
+      "de",
+      "dk",
+      "fr",
+      "gb",
+      "ie",
+      "it",
+      "nl",
+      "se",
+      "us"
+    ]
+  }
+}

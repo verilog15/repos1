@@ -1,0 +1,11 @@
+{
+  "Opera": {
+    "domain": "auth.opera.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "other"
+    ]
+  }
+}

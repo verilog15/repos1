@@ -1,0 +1,12 @@
+{
+  "Pushover": {
+    "domain": "pushover.net",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.pushover.net/i49",
+    "categories": [
+      "developer"
+    ]
+  }
+}

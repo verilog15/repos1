@@ -1,0 +1,27 @@
+{
+  "First Tech Federal Credit Union": {
+    "domain": "firsttechfed.com",
+    "url": "https://www.firsttechfed.com/",
+    "tfa": [
+      "custom-software",
+      "custom-hardware",
+      "sms",
+      "call",
+      "email",
+      "totp"
+    ],
+    "custom-software": [
+      "Entrust Identity Guard"
+    ],
+    "custom-hardware": [
+      "Entrust Hardware Token"
+    ],
+    "documentation": "https://www.firsttechfed.com/help/security/prevent#multifunction",
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

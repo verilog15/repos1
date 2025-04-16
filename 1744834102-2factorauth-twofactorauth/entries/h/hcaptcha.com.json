@@ -1,0 +1,12 @@
+{
+  "hCaptcha": {
+    "domain": "hcaptcha.com",
+    "tfa": [
+      "u2f"
+    ],
+    "categories": [
+      "security",
+      "developer"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "M&T Bank": {
+    "domain": "mtb.com",
+    "additional-domains": [
+      "mandtbank.com"
+    ],
+    "tfa": [
+      "sms",
+      "email",
+      "custom-software"
+    ],
+    "custom-software": [
+      "M&T Mobile app"
+    ],
+    "documentation": "https://www.mtb.com/help-center/banking-security/online-mobile-banking-security",
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

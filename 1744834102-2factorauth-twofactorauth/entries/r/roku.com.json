@@ -1,0 +1,30 @@
+{
+  "Roku": {
+    "domain": "roku.com",
+    "tfa": [
+      "email"
+    ],
+    "documentation": "https://support.roku.com/article/22482363662103",
+    "categories": [
+      "entertainment"
+    ],
+    "regions": [
+      "us",
+      "ca",
+      "fr",
+      "gb",
+      "ar",
+      "br",
+      "cl",
+      "co",
+      "cr",
+      "sv",
+      "gt",
+      "hn",
+      "mx",
+      "ni",
+      "pa",
+      "pe"
+    ]
+  }
+}

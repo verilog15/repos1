@@ -1,0 +1,11 @@
+{
+  "TorGuard": {
+    "domain": "torguard.net",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "vpn"
+    ]
+  }
+}

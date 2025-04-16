@@ -1,0 +1,12 @@
+{
+  "101domain": {
+    "domain": "101domain.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.101domain.com/kb/setup-two-factor-authentication",
+    "categories": [
+      "domains"
+    ]
+  }
+}

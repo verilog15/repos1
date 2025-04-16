@@ -1,0 +1,19 @@
+{
+  "Philipps-Universität Marburg": {
+    "domain": "uni-marburg.de",
+    "tfa": [
+      "totp",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://www.uni-marburg.de/de/hrz/dienste/2fa",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Educative": {
+    "domain": "educative.io",
+    "tfa": [
+      "email"
+    ],
+    "categories": [
+      "education",
+      "developer"
+    ]
+  }
+}

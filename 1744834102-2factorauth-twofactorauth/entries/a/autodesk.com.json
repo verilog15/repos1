@@ -1,0 +1,18 @@
+{
+  "Autodesk": {
+    "domain": "autodesk.com",
+    "additional-domains": [
+      "tinkercad.com"
+    ],
+    "tfa": [
+      "sms",
+      "call",
+      "email",
+      "totp"
+    ],
+    "documentation": "https://knowledge.autodesk.com/customer-service/account-management/account-profile/account-security/two-step-verification",
+    "categories": [
+      "creativity"
+    ]
+  }
+}

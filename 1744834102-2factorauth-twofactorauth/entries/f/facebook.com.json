@@ -1,0 +1,17 @@
+{
+  "Facebook": {
+    "domain": "facebook.com",
+    "additional-domains": [
+      "messenger.com"
+    ],
+    "tfa": [
+      "sms",
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://www.facebook.com/help/148233965247823",
+    "categories": [
+      "social"
+    ]
+  }
+}

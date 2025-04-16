@@ -1,0 +1,12 @@
+{
+  "Adyen": {
+    "domain": "adyen.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://docs.adyen.com/account/multi-factor-authentication",
+    "categories": [
+      "payments"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Abode": {
+    "domain": "goabode.com",
+    "additional-domains": [
+      "goabode.co.uk",
+      "abode.mx"
+    ],
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.goabode.com/docs/two-factor-authentication",
+    "categories": [
+      "iot"
+    ],
+    "regions": [
+      "us",
+      "ca",
+      "gb",
+      "mx"
+    ]
+  }
+}

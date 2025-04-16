@@ -1,0 +1,19 @@
+{
+  "Alaska Airlines": {
+    "domain": "alaskaair.com",
+    "contact": {
+      "facebook": "alaskaairlines",
+      "twitter": "AlaskaAir"
+    },
+    "categories": [
+      "travel"
+    ],
+    "regions": [
+      "ca",
+      "cr",
+      "bz",
+      "mx",
+      "us"
+    ]
+  }
+}

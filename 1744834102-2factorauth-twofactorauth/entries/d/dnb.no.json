@@ -1,0 +1,24 @@
+{
+  "DNB": {
+    "domain": "dnb.no",
+    "url": "https://www.dnb.no/",
+    "tfa": [
+      "custom-software",
+      "custom-hardware",
+      "sms"
+    ],
+    "custom-hardware": [
+      "BankID card reader"
+    ],
+    "custom-software": [
+      "BankID app"
+    ],
+    "documentation": "https://www.dnb.no/privat/kundeservice/innlogging-nettbank.html",
+    "regions": [
+      "no"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

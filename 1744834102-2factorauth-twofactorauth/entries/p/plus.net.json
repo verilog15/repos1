@@ -1,0 +1,15 @@
+{
+  "Plusnet": {
+    "domain": "plus.net",
+    "contact": {
+      "twitter": "Plusnet",
+      "facebook": "plusnet"
+    },
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "gb"
+    ]
+  }
+}

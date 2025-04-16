@@ -1,0 +1,24 @@
+{
+  "Temple University": {
+    "domain": "temple.edu",
+    "tfa": [
+      "sms",
+      "call",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Duo D100 Token"
+    ],
+    "documentation": "https://its.temple.edu/two-step-verification",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

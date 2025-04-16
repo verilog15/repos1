@@ -1,0 +1,14 @@
+{
+  "AltoIRA": {
+    "domain": "altoira.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "finance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

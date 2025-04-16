@@ -1,0 +1,16 @@
+{
+  "Arcadia": {
+    "domain": "arcadia.com",
+    "contact": {
+      "email": "support@arcadia.com",
+      "facebook": "ArcadiaHQ",
+      "twitter": "arcadia"
+    },
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

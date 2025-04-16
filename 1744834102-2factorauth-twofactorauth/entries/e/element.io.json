@@ -1,0 +1,12 @@
+{
+  "Element": {
+    "domain": "element.io",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://ems-docs.element.io/link/6#bkmrk-how-do-i-enable-2fa-",
+    "categories": [
+      "communication"
+    ]
+  }
+}

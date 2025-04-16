@@ -1,0 +1,19 @@
+{
+  "Techniker Krankenkasse": {
+    "domain": "tk.de",
+    "tfa": [
+      "custom-software"
+    ],
+    "custom-software": [
+      "TK-App"
+    ],
+    "documentation": "https://www.tk.de/techniker/unternehmensseiten/unternehmen/die-tk-app/2023678",
+    "categories": [
+      "insurance",
+      "health"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

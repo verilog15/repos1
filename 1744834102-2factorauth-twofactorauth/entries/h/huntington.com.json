@@ -1,0 +1,17 @@
+{
+  "Huntington National Bank": {
+    "domain": "huntington.com",
+    "url": "https://www.huntington.com",
+    "tfa": [
+      "call",
+      "sms",
+      "email"
+    ],
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

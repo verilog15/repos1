@@ -1,0 +1,17 @@
+{
+  "US Mobile": {
+    "domain": "usmobile.com",
+    "tfa": [
+      "sms",
+      "email",
+      "totp"
+    ],
+    "documentation": "https://usmobile.frontkb.com/en/articles/237760",
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

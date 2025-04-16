@@ -1,0 +1,22 @@
+{
+  "Erste Bank [HR]": {
+    "domain": "erstebank.hr",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "George App"
+    ],
+    "custom-hardware": [
+      "Display card"
+    ],
+    "documentation": "https://www.erstebank.hr/hr/sigurnost#/modalComponent/isOpen/true/url/%2Fhr%2Fconfiguration%2Fleads%2Fsigurnost0%2Fsigurno-online-bankarenje.modal",
+    "regions": [
+      "hr"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

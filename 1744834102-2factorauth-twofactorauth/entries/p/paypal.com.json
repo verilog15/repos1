@@ -1,0 +1,16 @@
+{
+  "PayPal": {
+    "domain": "paypal.com",
+    "additional-domains": [
+      "paypal-search.com"
+    ],
+    "tfa": [
+      "totp"
+    ],
+    "notes": "2FA can only be setup in web browser and not through the PayPal App.",
+    "documentation": "https://www.paypal.com/us/cshelp/article/help167",
+    "categories": [
+      "payments"
+    ]
+  }
+}

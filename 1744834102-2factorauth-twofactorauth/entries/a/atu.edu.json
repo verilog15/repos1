@@ -1,0 +1,23 @@
+{
+  "Arkansas Tech University": {
+    "domain": "atu.edu",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Duo D100 Token"
+    ],
+    "documentation": "https://support.atu.edu/support/solutions/folders/7000078509",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

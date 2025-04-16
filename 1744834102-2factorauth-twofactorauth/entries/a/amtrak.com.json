@@ -1,0 +1,15 @@
+{
+  "Amtrak": {
+    "domain": "amtrak.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "categories": [
+      "transport"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

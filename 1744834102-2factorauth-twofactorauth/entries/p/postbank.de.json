@@ -1,0 +1,22 @@
+{
+  "Postbank": {
+    "domain": "postbank.de",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Seal One dongle"
+    ],
+    "custom-software": [
+      "Postbank BestSign"
+    ],
+    "documentation": "https://www.postbank.de/privatkunden/sicherheitsverfahren.html",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

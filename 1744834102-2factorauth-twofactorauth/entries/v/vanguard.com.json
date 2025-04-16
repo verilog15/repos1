@@ -1,0 +1,25 @@
+{
+  "Vanguard": {
+    "domain": "vanguard.com",
+    "url": "https://www.vanguard.com/",
+    "img": "vanguard.svg",
+    "tfa": [
+      "sms",
+      "call",
+      "u2f",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Voice Verification"
+    ],
+    "documentation": "https://investor.vanguard.com/security/security-keys",
+    "notes": "Security keys can not be used to log in to mobile app or mobile website.",
+    "categories": [
+      "investing"
+    ],
+    "regions": [
+      "-gb",
+      "-au"
+    ]
+  }
+}

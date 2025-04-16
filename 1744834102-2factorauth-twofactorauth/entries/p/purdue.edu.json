@@ -1,0 +1,22 @@
+{
+  "Purdue University": {
+    "domain": "purdue.edu",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "BoilerKey Hardware OTP"
+    ],
+    "documentation": "https://www.it.purdue.edu/login/",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

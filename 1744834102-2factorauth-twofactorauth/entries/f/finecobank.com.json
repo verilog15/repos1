@@ -1,0 +1,20 @@
+{
+  "Fineco Bank": {
+    "domain": "finecobank.com",
+    "tfa": [
+      "sms",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Fineco app"
+    ],
+    "documentation": "https://finecobank.com/it/online/sicurezza/",
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "it",
+      "gb"
+    ]
+  }
+}

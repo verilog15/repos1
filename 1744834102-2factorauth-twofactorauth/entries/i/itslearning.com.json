@@ -1,0 +1,26 @@
+{
+  "itslearning": {
+    "domain": "itslearning.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://support.itslearning.com/en/support/solutions/articles/7000066757",
+    "notes": "Only available to system administrators",
+    "categories": [
+      "education"
+    ],
+    "regions": [
+      "de",
+      "dk",
+      "nl",
+      "no",
+      "gb",
+      "us",
+      "se",
+      "fi",
+      "fr",
+      "es",
+      "tr"
+    ]
+  }
+}

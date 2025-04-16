@@ -1,0 +1,13 @@
+{
+  "Porkbun": {
+    "domain": "porkbun.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://kb.porkbun.com/article/19--",
+    "categories": [
+      "domains"
+    ]
+  }
+}

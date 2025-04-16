@@ -1,0 +1,12 @@
+{
+  "Assembla": {
+    "domain": "assembla.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://articles.assembla.com/en/articles/1914077",
+    "categories": [
+      "developer"
+    ]
+  }
+}

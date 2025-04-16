@@ -1,0 +1,16 @@
+{
+  "BitGo": {
+    "domain": "bitgo.com",
+    "tfa": [
+      "totp",
+      "custom-hardware",
+      "u2f"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

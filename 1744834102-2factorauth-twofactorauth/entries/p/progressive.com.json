@@ -1,0 +1,15 @@
+{
+  "Progressive": {
+    "domain": "progressive.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "categories": [
+      "insurance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

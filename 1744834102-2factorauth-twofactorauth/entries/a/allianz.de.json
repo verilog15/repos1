@@ -1,0 +1,15 @@
+{
+  "Allianz": {
+    "domain": "allianz.de",
+    "tfa": [
+      "sms"
+    ],
+    "documentation": "https://www.allianz.de/service/meine-allianz/#faq",
+    "categories": [
+      "insurance"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

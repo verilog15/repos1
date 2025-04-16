@@ -1,0 +1,13 @@
+{
+  "ConvertKit": {
+    "domain": "convertkit.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.convertkit.com/en/articles/3925724",
+    "categories": [
+      "marketing"
+    ]
+  }
+}

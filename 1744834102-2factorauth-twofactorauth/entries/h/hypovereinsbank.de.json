@@ -1,0 +1,24 @@
+{
+  "HypoVereinsbank": {
+    "domain": "hypovereinsbank.de",
+    "img": "unicredit.svg",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "photoTAN card reader"
+    ],
+    "custom-software": [
+      "HVB Mobile Banking"
+    ],
+    "documentation": "https://www.hypovereinsbank.de/hvb/services/digitales-banking/psd2/tan-verfahren",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

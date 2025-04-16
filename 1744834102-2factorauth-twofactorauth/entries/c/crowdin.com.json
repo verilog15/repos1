@@ -1,0 +1,13 @@
+{
+  "Crowdin": {
+    "domain": "crowdin.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://support.crowdin.com/account-settings/#two-factor-authentication",
+    "categories": [
+      "developer"
+    ]
+  }
+}

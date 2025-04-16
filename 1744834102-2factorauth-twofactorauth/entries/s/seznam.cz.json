@@ -1,0 +1,19 @@
+{
+  "Seznam.cz": {
+    "domain": "seznam.cz",
+    "tfa": [
+      "totp",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Seznam.cz mobile app"
+    ],
+    "documentation": "https://napoveda.seznam.cz/cz/login/dvoufazove-overeni/",
+    "categories": [
+      "email"
+    ],
+    "regions": [
+      "cz"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Vodafone [UK]": {
+    "domain": "vodafone.co.uk",
+    "img": "vodafone.svg",
+    "tfa": [
+      "sms"
+    ],
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "gb"
+    ]
+  }
+}

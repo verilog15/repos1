@@ -1,0 +1,18 @@
+{
+  "NatWest": {
+    "domain": "natwest.com",
+    "tfa": [
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "Card reader"
+    ],
+    "documentation": "https://www.natwest.com/banking-with-natwest/how-to/card-reader.html",
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "gb"
+    ]
+  }
+}

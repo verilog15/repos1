@@ -1,0 +1,34 @@
+{
+  "Pleo": {
+    "domain": "pleo.io",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://help.pleo.io/en/articles/5628169",
+    "categories": [
+      "banking",
+      "finance",
+      "payments"
+    ],
+    "regions": [
+      "at",
+      "be",
+      "de",
+      "dk",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "ie",
+      "it",
+      "lu",
+      "nl",
+      "no",
+      "pt",
+      "se",
+      "us"
+    ]
+  }
+}

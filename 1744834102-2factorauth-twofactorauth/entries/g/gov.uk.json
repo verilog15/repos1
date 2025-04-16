@@ -1,0 +1,15 @@
+{
+  "GOV.UK": {
+    "domain": "gov.uk",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "categories": [
+      "government"
+    ],
+    "regions": [
+      "gb"
+    ]
+  }
+}

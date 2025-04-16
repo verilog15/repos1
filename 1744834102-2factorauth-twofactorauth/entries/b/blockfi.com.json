@@ -1,0 +1,11 @@
+{
+  "BlockFi": {
+    "domain": "blockfi.com",
+    "tfa": [
+      "totp"
+    ],
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Fandom": {
+    "domain": "fandom.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://community.fandom.com/wiki/Help:2FA",
+    "categories": [
+      "other"
+    ]
+  }
+}

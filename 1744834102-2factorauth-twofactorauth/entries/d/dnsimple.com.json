@@ -1,0 +1,13 @@
+{
+  "DNSimple": {
+    "domain": "dnsimple.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://support.dnsimple.com/articles/two-factor-authentication/",
+    "categories": [
+      "domains"
+    ]
+  }
+}

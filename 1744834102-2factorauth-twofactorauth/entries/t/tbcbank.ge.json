@@ -1,0 +1,15 @@
+{
+  "TBC Bank": {
+    "domain": "tbcbank.ge",
+    "contact": {
+      "twitter": "JSCTBC",
+      "email": "info@tbcbank.com.ge"
+    },
+    "regions": [
+      "ge"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

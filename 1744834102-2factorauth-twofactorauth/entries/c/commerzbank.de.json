@@ -1,0 +1,23 @@
+{
+  "Commerzbank": {
+    "domain": "commerzbank.de",
+    "tfa": [
+      "sms",
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "photoTAN card reader"
+    ],
+    "custom-software": [
+      "Commerzbank photoTAN"
+    ],
+    "documentation": "https://www.commerzbank.de/konten-zahlungsverkehr/service/tan-verfahren/",
+    "regions": [
+      "de"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

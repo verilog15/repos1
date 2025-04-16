@@ -1,0 +1,24 @@
+{
+  "Okta": {
+    "domain": "okta.com",
+    "tfa": [
+      "sms",
+      "call",
+      "email",
+      "totp",
+      "custom-hardware",
+      "u2f",
+      "custom-software"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "custom-software": [
+      "Okta Verify"
+    ],
+    "documentation": "https://help.okta.com/en-us/content/topics/security/mfa/mfa-factors.htm",
+    "categories": [
+      "identity"
+    ]
+  }
+}

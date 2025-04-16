@@ -1,0 +1,15 @@
+{
+  "NDAX": {
+    "domain": "ndax.io",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.ndax.io/en_us/categories/-B1hNr3zSi",
+    "categories": [
+      "cryptocurrencies"
+    ],
+    "regions": [
+      "ca"
+    ]
+  }
+}

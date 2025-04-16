@@ -1,0 +1,14 @@
+{
+  "Tebex": {
+    "domain": "tebex.io",
+    "tfa": [
+      "sms",
+      "email",
+      "totp"
+    ],
+    "notes": "SMS is only a backup for TOTP 2FA.",
+    "categories": [
+      "payments"
+    ]
+  }
+}

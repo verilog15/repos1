@@ -1,0 +1,23 @@
+{
+  "California Institute of Technology (CalTech)": {
+    "domain": "caltech.edu",
+    "tfa": [
+      "custom-software",
+      "custom-hardware"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Yubico OTP"
+    ],
+    "documentation": "https://www.imss.caltech.edu/services/security/mfa/self-enrollment",
+    "notes": "SMS-capable phone required for initial setup.",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

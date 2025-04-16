@@ -1,0 +1,22 @@
+{
+  "Login.gov": {
+    "domain": "login.gov",
+    "tfa": [
+      "sms",
+      "call",
+      "totp",
+      "u2f",
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "PIV/CAC"
+    ],
+    "documentation": "https://www.login.gov/help/get-started/authentication-methods/",
+    "categories": [
+      "government"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

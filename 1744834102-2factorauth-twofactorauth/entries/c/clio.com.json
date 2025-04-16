@@ -1,0 +1,13 @@
+{
+  "Clio": {
+    "domain": "clio.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.clio.com/hc/en-us/articles/9284706542619",
+    "recovery": "https://help.clio.com/hc/en-us/articles/9284748707739",
+    "categories": [
+      "legal"
+    ]
+  }
+}

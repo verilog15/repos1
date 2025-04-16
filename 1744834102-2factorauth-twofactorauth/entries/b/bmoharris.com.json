@@ -1,0 +1,17 @@
+{
+  "BMO Harris Bank": {
+    "domain": "bmoharris.com",
+    "img": "bmo.svg",
+    "tfa": [
+      "sms",
+      "email",
+      "call"
+    ],
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

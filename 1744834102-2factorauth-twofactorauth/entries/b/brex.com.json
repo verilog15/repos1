@@ -1,0 +1,16 @@
+{
+  "Brex": {
+    "domain": "brex.com",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://www.brex.com/support/two-factor-authentication",
+    "categories": [
+      "finance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

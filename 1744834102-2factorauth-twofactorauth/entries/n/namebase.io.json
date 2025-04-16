@@ -1,0 +1,13 @@
+{
+  "Namebase": {
+    "domain": "namebase.io",
+    "tfa": [
+      "totp"
+    ],
+    "recovery": "https://www.namebase.io/faq/#how-do-i-reset-my-2fa",
+    "categories": [
+      "domains",
+      "cryptocurrencies"
+    ]
+  }
+}

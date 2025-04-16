@@ -1,0 +1,17 @@
+{
+  "Resolver": {
+    "domain": "resolver.co.uk",
+    "url": "https://www.resolver.co.uk",
+    "contact": {
+      "facebook": "resolvercouk",
+      "twitter": "resolvercouk"
+    },
+    "categories": [
+      "legal"
+    ],
+    "regions": [
+      "gb",
+      "in"
+    ]
+  }
+}

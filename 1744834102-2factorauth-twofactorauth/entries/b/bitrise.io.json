@@ -1,0 +1,12 @@
+{
+  "Bitrise": {
+    "domain": "bitrise.io",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://devcenter.bitrise.io/getting-started/account-security/",
+    "categories": [
+      "developer"
+    ]
+  }
+}

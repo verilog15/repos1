@@ -1,0 +1,18 @@
+{
+  "Northwestern Mutual": {
+    "domain": "northwesternmutual.com",
+    "tfa": [
+      "totp",
+      "call",
+      "sms"
+    ],
+    "documentation": "https://www.northwesternmutual.com/security-and-privacy/",
+    "categories": [
+      "finance",
+      "insurance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

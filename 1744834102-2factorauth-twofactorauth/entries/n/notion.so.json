@@ -1,0 +1,13 @@
+{
+  "Notion": {
+    "domain": "notion.so",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://www.notion.so/help/two-step-verification",
+    "categories": [
+      "communication"
+    ]
+  }
+}

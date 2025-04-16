@@ -1,0 +1,16 @@
+{
+  "Delta": {
+    "domain": "delta.com",
+    "tfa": [
+      "sms",
+      "email",
+      "custom-software"
+    ],
+    "custom-software": [
+      "Fly Delta app"
+    ],
+    "categories": [
+      "travel"
+    ]
+  }
+}

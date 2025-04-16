@@ -1,0 +1,19 @@
+{
+  "Bank Central Asia (BCA)": {
+    "domain": "bca.co.id",
+    "url": "https://www.bca.co.id/en",
+    "tfa": [
+      "custom-hardware"
+    ],
+    "custom-hardware": [
+      "KeyBCA token"
+    ],
+    "documentation": "https://www.bca.co.id/en/Individu/Produk/E-Banking/Klik-BCA",
+    "regions": [
+      "id"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

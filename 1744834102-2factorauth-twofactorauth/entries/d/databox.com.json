@@ -1,0 +1,13 @@
+{
+  "Databox": {
+    "domain": "databox.com",
+    "tfa": [
+      "totp",
+      "sms"
+    ],
+    "documentation": "https://help.databox.com/overview-two-factor-authentication-2fa",
+    "categories": [
+      "marketing"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Tower Federal Credit Union": {
+    "domain": "towerfcu.org",
+    "tfa": [
+      "sms",
+      "call",
+      "totp"
+    ],
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

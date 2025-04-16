@@ -1,0 +1,16 @@
+{
+  "Grubhub": {
+    "domain": "grubhub.com",
+    "url": "https://www.grubhub.com/",
+    "contact": {
+      "facebook": "grubhub",
+      "twitter": "Grubhub"
+    },
+    "categories": [
+      "food"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

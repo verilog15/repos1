@@ -1,0 +1,15 @@
+{
+  "Envato": {
+    "domain": "envato.com",
+    "additional-domains": [
+      "placeit.net"
+    ],
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.market.envato.com/hc/articles/115005592963",
+    "categories": [
+      "other"
+    ]
+  }
+}

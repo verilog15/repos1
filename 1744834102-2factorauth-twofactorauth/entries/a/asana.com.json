@@ -1,0 +1,12 @@
+{
+  "Asana": {
+    "domain": "asana.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://asana.com/guide/help/fundamentals/two-factor-authentication",
+    "categories": [
+      "task"
+    ]
+  }
+}

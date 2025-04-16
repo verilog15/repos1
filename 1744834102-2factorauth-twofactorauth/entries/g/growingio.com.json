@@ -1,0 +1,15 @@
+{
+  "GrowingIO": {
+    "domain": "growingio.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://docs.growingio.com/v3/product-manual/personal/security",
+    "categories": [
+      "marketing"
+    ],
+    "regions": [
+      "cn"
+   ]
+  }
+}

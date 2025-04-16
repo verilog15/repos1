@@ -1,0 +1,16 @@
+{
+  "RightCapital": {
+    "domain": "rightcapital.com",
+    "url": "https://www.rightcapital.com",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.rightcapital.com/article/40-two-step-verification",
+    "categories": [
+      "finance"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

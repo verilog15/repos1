@@ -1,0 +1,25 @@
+{
+  "Stanford University": {
+    "domain": "stanford.edu",
+    "tfa": [
+      "sms",
+      "call",
+      "custom-software",
+      "custom-hardware",
+      "u2f"
+    ],
+    "custom-software": [
+      "Duo"
+    ],
+    "custom-hardware": [
+      "Fortitoken"
+    ],
+    "documentation": "https://uit.stanford.edu/service/webauth/twostep",
+    "categories": [
+      "universities"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

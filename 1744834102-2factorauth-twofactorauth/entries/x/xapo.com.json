@@ -1,0 +1,12 @@
+{
+  "Xapo": {
+    "domain": "xapo.com",
+    "tfa": [
+      "sms"
+    ],
+    "documentation": "https://customersupport.xapo.com/en_us/r1aIYObOd",
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

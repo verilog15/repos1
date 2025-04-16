@@ -1,0 +1,13 @@
+{
+  "Liquid": {
+    "domain": "liquid.com",
+    "url": "https://www.liquid.com/",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.liquid.com/en/articles/4883860",
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

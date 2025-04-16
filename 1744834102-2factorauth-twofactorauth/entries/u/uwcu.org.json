@@ -1,0 +1,17 @@
+{
+  "UW Credit Union": {
+    "domain": "uwcu.org",
+    "tfa": [
+      "sms",
+      "call",
+      "totp"
+    ],
+    "documentation": "https://help.uwcu.org/kb/Help/content/Prod-3486/",
+    "regions": [
+      "us"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

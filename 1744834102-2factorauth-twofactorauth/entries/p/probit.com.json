@@ -1,0 +1,15 @@
+{
+  "ProBit": {
+    "domain": "probit.com",
+    "url": "https://www.probit.com/",
+    "tfa": [
+      "sms",
+      "totp",
+      "u2f"
+    ],
+    "documentation": "https://www.probit.com/en-us/hc/360018127111",
+    "categories": [
+      "cryptocurrencies"
+    ]
+  }
+}

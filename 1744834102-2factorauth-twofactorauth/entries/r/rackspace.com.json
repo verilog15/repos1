@@ -1,0 +1,14 @@
+{
+  "Rackspace": {
+    "domain": "rackspace.com",
+    "url": "https://www.rackspace.com/",
+    "tfa": [
+      "sms",
+      "totp"
+    ],
+    "documentation": "https://docs.rackspace.com/docs/multi-factor-authentication",
+    "categories": [
+      "hosting"
+    ]
+  }
+}

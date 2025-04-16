@@ -1,0 +1,16 @@
+{
+  "sipgate": {
+    "domain": "sipgate.de",
+    "img": "sipgate.de.png",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://help.sipgate.de/hc/de/articles/4421549797649",
+    "categories": [
+      "utilities"
+    ],
+    "regions": [
+      "de"
+    ]
+  }
+}

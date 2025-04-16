@@ -1,0 +1,17 @@
+{
+  "United": {
+    "domain": "united.com",
+    "tfa": [
+      "email",
+      "sms",
+      "call",
+      "custom-software"
+    ],
+     "custom-software": [
+      "United App"
+    ],
+    "categories": [
+      "travel"
+    ]
+  }
+}

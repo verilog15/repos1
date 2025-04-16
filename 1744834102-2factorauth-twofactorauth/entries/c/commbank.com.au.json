@@ -1,0 +1,19 @@
+{
+  "Commonwealth Bank of Australia": {
+    "domain": "commbank.com.au",
+    "additional-domains": [
+      "netbank.com.au"
+    ],
+    "contact": {
+      "facebook": "commonwealthbank",
+      "twitter": "commbank",
+      "form": "https://www.commbank.com.au/retail/netbank/complaints-compliments-form"
+    },
+    "regions": [
+      "au"
+    ],
+    "categories": [
+      "banking"
+    ]
+  }
+}

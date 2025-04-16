@@ -1,0 +1,15 @@
+{
+  "American Kennel Club": {
+    "domain": "akc.org",
+    "tfa": [
+      "email"
+    ],
+    "documentation": "https://www.akc.org/about/site/two-factor-authentication/",
+    "categories": [
+      "other"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

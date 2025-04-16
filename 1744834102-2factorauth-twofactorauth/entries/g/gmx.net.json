@@ -1,0 +1,18 @@
+{
+  "GMX.net": {
+    "domain": "gmx.net",
+    "url": "https://www.gmx.net/",
+    "additional-domains": [
+      "gmx.at"
+    ],
+    "img": "gmx.svg",
+    "tfa": [
+      "totp"
+    ],
+    "documentation": "https://hilfe.gmx.net/sicherheit/2fa/einrichten.html",
+    "notes": "Setup requires SMS verification.",
+    "categories": [
+      "email"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Crowd Supply": {
+    "domain": "crowdsupply.com",
+    "tfa": [
+      "totp",
+      "u2f"
+    ],
+    "categories": [
+      "crowdfunding",
+      "retail"
+    ]
+  }
+}

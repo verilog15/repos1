@@ -1,0 +1,17 @@
+{
+  "Starbucks": {
+    "domain": "starbucks.com",
+    "tfa": [
+      "sms"
+    ],
+    "documentation": "https://customerservice.starbucks.com/sbux?id=topics&article=KB0013186",
+    "categories": [
+      "food"
+    ],
+    "regions": [
+    "-jp",
+    "-se",
+    "-au"
+    ]
+  }
+}

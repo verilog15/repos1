@@ -1,0 +1,15 @@
+{
+  "Bethpage Federal Credit Union": {
+    "domain": "bethpagefcu.com",
+    "tfa": [
+      "sms",
+      "email"
+    ],
+    "categories": [
+      "banking"
+    ],
+    "regions": [
+      "us"
+    ]
+  }
+}

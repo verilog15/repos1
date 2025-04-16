@@ -1,0 +1,16 @@
+{
+  "Big W": {
+    "domain": "bigw.com.au",
+    "tfa": [
+      "sms",
+      "call",
+      "email"
+    ],
+    "regions": [
+      "au"
+    ],
+    "categories": [
+      "retail"
+    ]
+  }
+}
