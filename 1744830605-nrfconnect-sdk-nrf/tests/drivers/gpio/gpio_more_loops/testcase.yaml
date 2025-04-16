@@ -1,0 +1,33 @@
+common:
+  tags:
+    - drivers
+    - gpio
+    - ci_tests_drivers_gpio
+  depends_on: gpio
+  filter: not CONFIG_COVERAGE
+  harness: ztest
+  harness_config:
+    fixture: gpio_loopback
+
+tests:
+  drivers.gpio.gpio_more_loops:
+    platform_allow:
+      - nrf54l15dk/nrf54l15/cpuapp
+      - nrf54l15dk/nrf54l15/cpuflpr
+      - nrf54l09pdk/nrf54l09/cpuapp
+      - nrf54l09pdk/nrf54l09/cpuflpr
+      - nrf54l20pdk/nrf54l20/cpuapp
+      - nrf54l20pdk/nrf54l20/cpuflpr
+      - nrf54lm20apdk/nrf54lm20a/cpuapp
+      - nrf54lm20apdk@0.2.0/nrf54lm20a/cpuapp
+      - nrf54lv10apdk/nrf54lv10a/cpuapp
+      - nrf54h20dk/nrf54h20/cpuapp
+      - nrf7120pdk/nrf7120/cpuapp
+    integration_platforms:
+      - nrf54l15dk/nrf54l15/cpuapp
+      - nrf54l20pdk/nrf54l20/cpuapp
+      - nrf54l09pdk/nrf54l09/cpuapp
+      - nrf54lm20apdk/nrf54lm20a/cpuapp
+      - nrf54lv10apdk/nrf54lv10a/cpuapp
+      - nrf54h20dk/nrf54h20/cpuapp
+      - nrf7120pdk/nrf7120/cpuapp
