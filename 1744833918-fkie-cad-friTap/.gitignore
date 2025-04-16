@@ -1,0 +1,84 @@
+#frida stuff
+frida-server*
+__handlers__
+friTap.egg-info
+dist/
+*.pcap
+*.txt
+*.trace
+
+# npm stuff
+package-lock.json # not really needed when working with frida-compile
+
+# debian package generation stuff
+deb_dist/
+*.tar.gz
+
+# apple meta data
+.DS_Store
+
+# pycache
+*__pycache__*
+
+# vscode stuff
+.vscode
+
+# debug output from testing stuff
+*.log
+*.keys
+
+#keys and certs for testing
+*.pem
+
+# venv and building
+vnev/
+build/
+venv/
+env/
+
+
+ExampleLinux/.devcontainer/*
+ExampleLinux/sslserver
+ExampleLinux/wolfssl/*
+!ExampleLinux/wolfssl/.gitkeep
+*.o
+
+# Gradle Wrapper files
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+
+# Android build files
+/app/build/
+
+# IntelliJ IDEA specific files
+*.iml
+.idea/
+/.idea/*
+
+# User-specific configuration files
+*.ipr
+*.iws
+
+# Others
+/captures
+.externalNativeBuild
+.cxx/
+*.log
+
+# Generated files
+*.apk
+*.ap_
+
+
+# Temporary files
+*.tmp
+*.temp
+
+# Android Studio Patch files
+gen-external-apklib/
+out/
+
+# Keystore files
+*.jks
+*.keystore
+node_modules
