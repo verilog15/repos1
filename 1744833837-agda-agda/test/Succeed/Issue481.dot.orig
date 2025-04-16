@@ -1,0 +1,5 @@
+digraph dependencies {
+   m2[label="Issue481Record"];
+   m3[label="Issue481"];
+   m3 -> m2;
+}

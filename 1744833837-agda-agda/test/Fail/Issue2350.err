@@ -1,0 +1,7 @@
+error: [UnsolvedConstraints]
+Failed to solve the following constraints:
+  Resolve instance argument _a_6 : A
+  Candidates
+    b : A
+    a : A
+    (stuck)
