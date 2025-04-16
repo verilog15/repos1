@@ -1,0 +1,52 @@
+{
+  "name": "ibm-openapi-validator",
+  "workspaces": [
+    "packages/utilities",
+    "packages/ruleset",
+    "packages/validator"
+  ],
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM/openapi-validator.git"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules/ && npm run clean --workspaces",
+    "build-docker": "docker build -t ibmdevxsdk/openapi-validator:latest .",
+    "test": "npm run test --workspaces",
+    "test-ruleset": "npm run test --workspace packages/ruleset",
+    "test-utilities": "npm run test --workspace packages/utilities",
+    "test-validator": "npm run test --workspace packages/validator",
+    "test-docker": "npm run build-docker && docker run --rm --volume \"$PWD\"/packages/validator/test/cli-validator/alternate-spectral-configs/extends-default.yaml:/data/ruleset.yaml --volume \"$PWD\"/packages/validator/test/cli-validator/mock-files/oas3/clean.yml:/data/openapi.yaml ibmdevxsdk/openapi-validator:latest --ruleset ruleset.yaml openapi.yaml",
+    "jest": "jest",
+    "test-travis": "npm run test-travis --workspaces",
+    "lint": "npm run lint --workspaces && eslint --cache --max-warnings 0 scripts .eslintrc.js",
+    "fix": "npm run fix --workspaces && eslint --fix scripts .eslintrc.js",
+    "pkg": "npm run pkg --workspace packages/validator",
+    "link": "npm run link --workspace packages/validator --workspace packages/ruleset",
+    "unlink": "npm run unlink --workspace packages/validator",
+    "all": "npm run test && npm run lint",
+    "format-readme-toc": "npx -y markdown-toc --maxdepth 5 -i README.md",
+    "generate-utilities-docs": "scripts/generate-utilities-docs.js"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.4",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.4",
+    "mustache": "^4.2.0",
+    "semantic-release": "^21.0.7"
+  },
+  "overrides": {
+    "proxy-agent": "^6.3.0",
+    "micromatch": "^4.0.8",
+    "jsonpath-plus": "^10.3.0",
+    "rollup": "2.79.2"
+  }
+}

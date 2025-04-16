@@ -1,0 +1,17 @@
+node_modules
+.DS_Store
+npm-debug.log*
+.eslintcache
+dist
+.validaterc
+.validateignore
+.idea/
+bin/
+.nyc_output/
+coverage/
+.spectral.json
+.spectral.yaml
+.spectral.yml
+.spectral.js
+.nvmrc
+.vscode/
