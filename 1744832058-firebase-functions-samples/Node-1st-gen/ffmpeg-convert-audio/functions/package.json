@@ -1,0 +1,28 @@
+{
+  "name": "ffmpeg-convert-audio",
+  "description": "FFMPEG Convert Audio Firebase Functions sample",
+  "dependencies": {
+    "@google-cloud/storage": "^4.7.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "ffmpeg-static": "^4.4.1",
+    "firebase-admin": "^13.0.2",
+    "firebase-functions": "^6.3.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "compile": "cp ../../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "private": true
+}

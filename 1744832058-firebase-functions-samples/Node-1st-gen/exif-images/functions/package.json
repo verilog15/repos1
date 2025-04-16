@@ -1,0 +1,27 @@
+{
+  "name": "exif-images-functions",
+  "description": "Extract EXIF metadata from images Firebase Functions sample",
+  "dependencies": {
+    "@google-cloud/storage": "^4.7.2",
+    "child-process-promise": "^2.2.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "firebase-admin": "^13.0.2",
+    "firebase-functions": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "compile": "cp ../../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "private": true
+}
