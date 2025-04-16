@@ -1,0 +1,41 @@
+**********************************************************************
+                     CnPack For Delphi/C++Builder
+                A Free, Open Source Project from China
+                 (C)Copyright 2001-2025 CnPack Team
+**********************************************************************
+
+Follow features depend on third part components:
+
+Script Wizard
+=============
+
+Depend on: RemObjects Pascal Script
+Revision :
+
+    svn 157 (For D5-D2007)
+             http://code.remobjects.com/svn/pascalscript/Source
+
+    svn 252 (For D2009 and above)
+             http://code.remobjects.com/svn/pascalscript/Source
+
+    github: commit 0fceeafb237d8ae54b7c3c3905e4158876d89d42 (For 12.3 x64 and above)
+             https://github.com/remobjects/pascalscript.git
+
+**********************************************************************
+
+Les fonctionnalit  s de suivi d  pendent des composants tiers:
+
+Script Wizard
+=============
+
+Depend on: RemObjects Pascal Script
+Revision :    svn 157 (For D5-D2007)
+             http://code.remobjects.com/svn/pascalscript/Source
+
+    svn 252 (For D2009 and above)
+             http://code.remobjects.com/svn/pascalscript/Source
+
+    github: commit 0fceeafb237d8ae54b7c3c3905e4158876d89d42 (For 12.3 x64 and above)
+             https://github.com/remobjects/pascalscript.git
+
+[EOF]

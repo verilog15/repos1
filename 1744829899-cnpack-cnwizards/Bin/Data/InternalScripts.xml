@@ -1,0 +1,23 @@
+<TCnScriptCollection PropFormat="node">
+  <o>
+    <Name>Check CRLF</Name>
+    <Confirm>0</Confirm>
+    <Mode>[smEditorFlatButton]</Mode>
+    <ShortCut>32819</ShortCut>
+    <RelFileName>..\PSDemo\CheckCRLF.pas</RelFileName>
+  </o>
+  <o>
+    <Name>Generate Code from Variable Declaration</Name>
+    <Confirm>0</Confirm>
+    <Mode>[smEditorFlatButton]</Mode>
+    <ShortCut>32819</ShortCut>
+    <RelFileName>..\PSDemo\GenVarObjCodes.pas</RelFileName>
+  </o>
+  <o>
+    <Name>Reload Current File</Name>
+    <Confirm>0</Confirm>
+    <Mode>[smEditorFlatButton]</Mode>
+    <ShortCut>32819</ShortCut>
+    <RelFileName>..\PSDemo\ReloadCurrentFile.pas</RelFileName>
+  </o>
+</TCnScriptCollection>

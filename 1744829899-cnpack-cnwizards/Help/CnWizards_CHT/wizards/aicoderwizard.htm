@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AI 輔助編碼專家</title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="4">
+  <tr>
+    <td class="head" height="16">AI 輔助編碼專家</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900" height="6"></td>
+  </tr>
+  <tr>
+    <td height=6></td>
+  </tr>
+</table>
+<p class="title">AI 輔助編碼專家</p>
+<p class="text" align="left">該專家能夠連接並調用幾個常用的 AI 公開引擎之一，提供 IDE 內的 AI 輔助編碼功能。各 AI 引擎的 API 密鑰需用戶自行申請。使用前，請先運行該專家的配置，在對話框中填入申請的 API 密鑰方能使用，如圖所示：</p>
+<p align="center"> <img src="aicoderconf.png"></p>
+<p class="text"><b>AI 輔助編碼專家設置對話框</b></p>
+<p class="text">該對話框列出了可用 AI 引擎的參數，可供用戶選擇使用的 AI 引擎，以及設置每一個 AI 引擎的模型、API 密鑰等。</p>
+<ul>
+  <li>
+    <p class="text"><b>當前 AI 引擎</b>：選擇當前要使用的 AI 引擎，該引擎一般必須配置有效的 API 密鑰。</p>
+  </li>
+  <li>
+    <p class="text"><b>超時秒數</b>：網絡通訊的超時秒數設置，0 表示使用系統默認值。</p>
+  </li>
+  <li>
+    <p class="text"><b>使用代理</b>：如勾選，則代表指定連接該 AI 引擎所需的代理服務器，可以是 HTTP 或 SOCKS5 代理，格式如「192.168.1.1:1080」。暫不支持用戶名密碼。</p>
+  </li>
+  <li>
+    <p class="text"><b>請求地址</b>：AI 引擎的 API 在線請求地址，由該 AI 引擎提供。</p>
+  </li>
+  <li>
+    <p class="text"><b>模型名稱</b>：選擇該 AI 引擎提供的可用的模型名稱。</p>
+  </li>
+  <li>
+    <p class="text"><b>採樣溫度</b>：即 Temperature 參數，控制 AI 思維的發散程度。</p>
+  </li>
+  <li>
+    <p class="text"><b>API 密鑰</b>：需填入在該 AI 引擎網站上註冊並申請的合法 API 密鑰。</p>
+  </li>
+  <li>
+    <p class="text"><b>流式輸出</b>：不勾選則控制讓 AI 引擎一次性返回完整應答數據，否則連續多次返回。</p>
+  </li>
+  <li>
+    <p class="text"><b>申請</b>：點擊申請鏈接可在線註冊並申請該 AI 引擎的 API 密鑰。</p>
+  </li>
+  <li>
+    <p class="text"><b>重置</b>：該按鈕可將當前 AI 引擎的設置恢復至默認狀態，但不清空 API 密鑰。</p>
+  </li>
+</ul>
+<p class="title" align="left">&nbsp;</p>
+<p class="text"><b>AI 輔助編碼專家菜單</b></p>
+<p class="text" align="left">AI 輔助編碼專家的菜單項如圖所示：</p>
+<p align="center"> <img src="aicodermenu.png"></p>
+<ul>
+  <li>
+    <p class="text"><b>解釋代碼</b>：向當前 AI 引擎發送請求，讓其解釋編輯器中選中的代碼塊，返回的內容將顯示在 AI 對話窗口中。</p>
+  </li>
+  <li>
+    <p class="text"><b>檢視代碼</b>：向當前 AI 引擎發送請求，讓其針對編輯器中選中的代碼塊進行檢視，也就是常說的 Code Review。返回的檢視意見將顯示在 AI 對話窗口中。</p>
+  </li>
+  <li>
+    <p class="text"><b>生成測試用例</b>：向當前 AI 引擎發送請求，讓其針對編輯器中選中的代碼塊生成一個無界面交互的測試用例。返回的結果將插入當前編輯器光標所在處，同時也顯示在 AI 對話窗口中，。</p>
+  </li>
+  <li>
+    <p class="text"><b>AI 對話窗口</b>：顯示 AI 對話窗口。</p>
+  </li>
+  <li>
+    <p class="text"><b>設置</b>：顯示上文的設置對話框。</p>
+  </li>
+</ul>
+<p class="title" align="left">&nbsp;</p>
+<p class="text"><b>AI 對話窗口</b></p>
+<p class="text" align="left">AI 對話窗口如圖所示。上部是聊天消息顯示區，下部是本地聊天消息發送區：</p>
+<p align="center"> <img src="aicoderchat.png"></p>
+<ul>
+  <li>
+    <p class="text"><b>切換發送框</b>：顯示或隱藏發送消息的區域。</p>
+  </li>
+  <li>
+    <p class="text"><b>清空消息</b>：清空消息列表對話框。</p>
+  </li>
+  <li>
+    <p class="text"><b>提問時附上編輯器內選中的代碼</b>：消息區內發送消息時，是否附上編輯器內選中的代碼供 AI 分析。</p>
+  </li>
+  <li>
+    <p class="text"><b>字體</b>：修改消息框與發送框的字體。</p>
+  </li>
+  <li>
+    <p class="text"><b>設置</b>：顯示上文的設置對話框。</p>
+  </li>
+  <li>
+    <p class="text"><b>幫助</b>：顯示此幫助。</p>
+  </li>
+</ul>
+<p class="title" align="left">&nbsp;</p>
+<p class="text" align="left">右鍵點擊消息體將彈出上下文菜單：</p>
+<ul>
+  <li>
+    <p class="text"><b>複製</b>：複製選中的消息體內容。</p>
+  </li>
+  <li>
+    <p class="text"><b>複製代碼</b>：複製選中的消息體中被 ``` 括起來的內容當作代碼處理。</p>
+  </li>
+</ul>
+
+<p class="title" align="left">&nbsp;
+<p class="title" align="left">相關主題 
+<p class="text" align="left"> <a href="wizards.htm">IDE 專家基本操作</a> 
+  <p class="text" align="left"> <a href="../options/wizconfig.htm">IDE 專家設置</a> 
+  <p class="text" align="left"> <a href="../cnpack/index.htm">關於 IDE 專家包</a> 
+  <p class="text" align="left">　 
+  <hr>
+  <p class="text" align="center"><a href="https://www.cnpack.org">(C)版權所有 2001-2025 CnPack 開發組</a></p>
+</body>
+</html>

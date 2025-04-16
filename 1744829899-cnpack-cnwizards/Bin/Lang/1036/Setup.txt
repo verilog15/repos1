@@ -1,0 +1,13 @@
+﻿!LanguageID=1036
+!LanguageName=Français
+!TranslationAuthor=Franck, David Caouette
+!TranslationAuthorEmail=FranckLGR@gmail.com, 1980dcaouette@gmail.com
+!TranslationDefaultFont=Tahoma,8,,,,
+csHintStr=Astuce
+csInstallSucc=Les assistants CnPack IDE ont été installés dans: <BR>
+csInstallSuccEnd=Exécutez à nouveau le programme d'installation pour désinstaller.
+csUnInstallSucc=Les assistants CnPack IDE ont été désinstallés de: <BR>
+csUnInstallSuccEnd=Exécutez à nouveau le programme d'installation pour installer.
+csInstallFail=Impossible de trouver Delphi ou C ++ Builder pour installer les assistants IDE CnPack.
+csUnInstallFail=Les assistants CnPack IDE sont déjà désactivés.
+csSetupCmdHelp=Cet outil prend en charge le mode ligne de commande sans afficher le formulaire principal. <BR> <BR> Aide sur le commutateur de ligne de commande: <BR> <BR> -i ou / i ou -install ou / install Install to IDE <BR> -u ou / u ou -uninstall ou / uninstall UnInstall à partir de l'IDE <BR> -n ou / n ou -NoMsg ou / NoMsg NE PAS afficher le message de réussite après l'exécution de l'installation. <BR> -? ou /? ou -h ou / h Affiche l'aide en ligne de commande.

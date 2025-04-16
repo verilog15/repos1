@@ -1,0 +1,19 @@
+﻿Contrato de Licença CnPack 2ª Edição
+
+Os produtos CnPack estão protegidos por direitos autorais de 2001-2025 pela equipe CnPack e por vários outros autores que submeteram seu código para inclusão. Este acordo de licença cobre apenas o código escrito pela equipe CnPack. Você deve entrar em contato com os outros autores sobre seus respectivos direitos autorais e condições.
+
+As regras que regem o uso do CnPack e do código-fonte do CnPack são derivadas da definição oficial de software de código aberto, disponível em https://www.opensource.org. As condições e restrições são as seguintes:
+
+1. O uso de distribuições binárias do CnPack é permitido para todos os usuários.
+
+2. Você não pode usar o código-fonte do CnPack para criar e distribuir versões personalizadas do CnPack sob o nome "CnPack" ou de outros produtos CnPack. Se você modificar e distribuir versões personalizadas do CnPack, a distribuição binária deve ter um nome diferente e ser claramente marcada para que os usuários saibam que não estão usando a distribuição oficial do CnPack. Uma versão visível e inalterada desta licença deve aparecer em qualquer distribuição modificada de produtos CnPack.
+
+3. Distribuições personalizadas do CnPack devem incluir todas as alterações personalizadas como um arquivo de patch que pode ser aplicado ao código-fonte original. Esta restrição está em vigor para proteger a integridade do código-fonte do autor original. Não será fornecida suporte para versões modificadas do CnPack pelos autores originais ou no site, fórum ou listas de discussão do CnPack.
+
+4. Sujeito às disposições do item 2, o código-fonte do CnPack pode ser usado livremente em projetos de código aberto sem informar a equipe CnPack. Todas as obras de código aberto derivadas do CnPack devem ser distribuídas sob uma licença compatível com esta licença e a definição oficial de software de código aberto, que pode ser obtida em https://www.opensource.org/.
+
+5. Sujeito às disposições do item 2, o código-fonte do CnPack também pode ser usado livremente para desenvolver produtos proprietários ou comerciais, incluindo plugins ou bibliotecas, e é recomendável informar a equipe CnPack.
+
+Por favor, note que a equipe CnPack e os outros autores contribuidores declaram que este pacote é fornecido "como está" e sem quaisquer garantias expressas ou implícitas, incluindo, mas não se limitando a, as garantias implícitas de comercialização e adequação para um propósito específico. Em outras palavras, nós não aceitamos nenhuma responsabilidade por qualquer dano que possa resultar do uso do CnPack ou de programas que usam o código-fonte do CnPack.
+
+Se você tiver alguma dúvida sobre esta licença, entre em contato com a equipe CnPack.

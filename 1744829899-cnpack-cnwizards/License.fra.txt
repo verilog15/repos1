@@ -1,0 +1,19 @@
+﻿Accord de licence CnPack 2ème édition
+
+Les produits CnPack sont protégés par le droit d'auteur de 2001-2025 par l'équipe CnPack et plusieurs autres auteurs qui ont soumis leur code pour y être inclus. La présente licence ne couvre que le code écrit par l'équipe CnPack. Vous devez contacter les autres auteurs concernant leurs droits d'auteur respectifs et leurs conditions.
+
+Les règles régissant l'utilisation de CnPack et du code source de CnPack sont dérivées de la définition officielle du logiciel libre, disponible sur https://www.opensource.org. Les conditions et restrictions sont les suivantes :
+
+1. L'utilisation des distributions binaires de CnPack est autorisée pour tous les utilisateurs.
+
+2. Vous ne pouvez pas utiliser le code source de CnPack pour créer et distribuer des versions personnalisées de CnPack sous le nom de « CnPack » ou d'autres produits CnPack. Si vous modifiez et distribuez des versions personnalisées de CnPack, la distribution binaire doit porter un nom différent et être clairement marquée afin que les utilisateurs puissent savoir qu'ils n'utilisent pas la distribution officielle de CnPack. Une version visible et non modifiée de cette licence doit apparaître dans toute distribution modifiée des produits CnPack.
+
+3. Les distributions personnalisées de CnPack doivent inclure toutes les modifications personnalisées sous forme de fichier de correctif (patch) qui peut être appliqué au code source original. Cette restriction est en place pour protéger l'intégrité du code source de l'auteur original. Aucun support ne sera fourni pour les versions modifiées de CnPack par les auteurs originaux ou sur le site web, le forum ou les listes de diffusion de CnPack.
+
+4. Sous réserve des dispositions de l'article 2, le code source de CnPack peut être utilisé librement dans des projets Open Source sans informer l'équipe CnPack. Tous les travaux Open Source dérivés de CnPack doivent être distribués sous une licence compatible avec cette licence et la définition officielle du logiciel libre, qui peut être obtenue sur https://www.opensource.org/.
+
+5. Sous réserve des dispositions de l'article 2, le code source de CnPack peut également être utilisé librement pour développer des produits propriétaires ou commerciaux, y compris des plugins ou des bibliothèques, et il est recommandé d'informer l'équipe CnPack.
+
+Veuillez noter que l'équipe CnPack et les autres auteurs contributeurs déclarent que ce paquet est fourni « tel quel » et sans aucune garantie expresse ou implicite, y compris, sans s'y limiter, les garanties implicites de commercialité et d'aptitude à un usage particulier. Autrement dit, nous n'acceptons aucune responsabilité pour tout dommage qui pourrait résulter de l'utilisation de CnPack ou de programmes utilisant le code source de CnPack.
+
+Si vous avez des questions concernant cette licence, veuillez contacter l'équipe CnPack.
